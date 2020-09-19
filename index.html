@@ -2,7 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
 		<title>Test 2D/3D</title>
 		<link
 			rel="stylesheet"
@@ -213,9 +216,18 @@
 			</div>
 			<!-- End of Container -->
 		</main>
+		<!-- Top Progress -->
+		<div
+			class="progress-bar progress-bar-striped progress-bar-animated bg-secondary fixed-top"
+			role="progressbar"
+			aria-valuenow="75"
+			aria-valuemin="0"
+			aria-valuemax="100"
+			style="width: 100%; height: 5px"
+		></div>
 		<!-- Bottom Progress -->
 		<div
-			class="progress-bar progress-bar-striped progress-bar-animated bg-dark fixed-bottom"
+			class="progress-bar progress-bar-striped progress-bar-animated bg-secondary fixed-bottom"
 			role="progressbar"
 			aria-valuenow="75"
 			aria-valuemin="0"

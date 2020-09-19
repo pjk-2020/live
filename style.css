@@ -69,8 +69,10 @@ body {
 	overflow: hidden;
 }
 
-.reload:hover {
-	background: #f8f9fa;
+.reload:hover,
+.reload:focus {
+	background: #575758;
+	color: #fff;
 	-webkit-animation: spin 4s linear infinite;
 	-moz-animation: spin 4s linear infinite;
 	animation: spin 4s linear infinite;
