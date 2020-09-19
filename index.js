@@ -17,7 +17,7 @@ const reloadPage = () => window.location.reload();
 // Slide show announce
 const slide_show_text = {
 	text:
-		'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, impedit?',
+		'သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေး ဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။',
 };
 const slide_show = {
 	output: `<marquee direction="left" speed="normal" behavior="loop" class="f-4">${slide_show_text.text}</marquee>`,
