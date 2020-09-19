@@ -57,13 +57,13 @@ window.onload = async (data, day, week) => {
 	// Day of week
 	day = new Date();
 	week = new Array(7);
-	week[0] = 'တနင်္ဂနွေနေ့';
+	week[0] = 'ဆန်းဒေး';
 	week[1] = 'တနင်္လာနေ့';
 	week[2] = 'အင်္ဂါနေ့';
 	week[3] = 'ဗုဒ္ဓဟူးနေ့';
 	week[4] = 'ကြာသာပေတေးနေ့';
 	week[5] = 'သောကြာနေ့';
-	week[6] = 'စနေနေ့';
+	week[6] = 'စနေ';
 
 	// let know = week[day.getDay()];
 	// console.log(know);
@@ -210,13 +210,10 @@ window.onload = async (data, day, week) => {
 	}
 
 	// Day of week condition
-	if (
-		week[day.getDay()] === 'တနင်္ဂနွေနေ့' ||
-		week[day.getDay()] === 'စနေနေ့'
-	) {
+	if (week[day.getDay()] === 'ဆန်းဒေး' || week[day.getDay()] === 'စနေ') {
 		document.getElementById('marketStatus').innerHTML = `${
 			week[day.getDay()]
-		}ပိတ်သည်။`;
+		}ပိတ်`;
 	}
 
 	// Display result to html
