@@ -57,7 +57,7 @@ setTimeout(() => {
 		// alert('Will you open it?');
 		window.open('https://chat.itcung.com/act/join/820/JxoEP7/', '_blank');
 	});
-}, 1000);
+}, 500);
 
 // 2D History Icon
 document.getElementById('saveIcon').innerHTML = save_icon;
@@ -66,7 +66,7 @@ setTimeout(() => {
 		// alert('Will you open it?');
 		window.open('https://twod.itcung.com/his/', '_blank');
 	});
-}, 1000);
+}, 500);
 
 // Eyes Icon
 document.querySelector('#eyesIcon').innerHTML = eyes_icon;
@@ -75,7 +75,7 @@ setTimeout(() => {
 		// alert('Will you open it?');
 		window.open('https://twod.itcung.com/lucky/', '_blank');
 	});
-}, 1000);
+}, 500);
 
 // Dice Icon
 document.querySelector('#diceIcon').innerHTML = dice_3;
@@ -84,7 +84,7 @@ setTimeout(() => {
 		// alert('Will you open it?');
 		window.open('https://twod.itcung.com/3d/', '_blank');
 	});
-}, 1000);
+}, 500);
 
 // Reload Icon
 document.querySelector('#custom-Reload-icon').innerHTML = reload_icon;
