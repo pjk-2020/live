@@ -73,10 +73,11 @@ body {
 	border-radius: 50%;
 	background: #a1a1a1;
 	color: #fff;
+	cursor: pointer;
 }
 
 /* phoneIcon */
-.phoneIcon {
+.saveIcon {
 	width: 1.5em;
 	height: 1.5em;
 	display: flex;
@@ -86,6 +87,35 @@ body {
 	border-radius: 50%;
 	background: #a1a1a1;
 	color: #fff;
+	cursor: pointer;
+}
+
+/* eyesIcon */
+.eyesIcon {
+	width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	border-radius: 50%;
+	background: #a1a1a1;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* diceIcon */
+.diceIcon {
+	width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	border-radius: 50%;
+	background: #a1a1a1;
+	color: #fff;
+	cursor: pointer;
 }
 
 /* reload */
