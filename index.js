@@ -11,13 +11,13 @@ const reload = document.getElementById('reload');
 reload.addEventListener('click', () => reloadPage());
 
 // Reload page in every 15 second
-setInterval(() => reloadPage(), 15000);
+setInterval(() => reloadPage(), 60000);
 const reloadPage = () => window.location.reload();
 
 // Slide show announce
 const slide_show_text = {
 	text:
-		'သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေး ဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။',
+		'ည(၁၀)နာရီကျော်ဝန်းကျင်၌ ထိုးရမည့် ဂဏန်း(၅)ကွက်ကို မနက်/ည အတွက် ပေါက်ပေး ၃သောင်းဖြင့် စီစဉ်ပေးလျှက်ရှိပါသည်။ 09 955 435 625 သို့ 2D/3D မနက်/ည လိုချင်ပါသည်ဟု စာပို့ထားပါရန်။ အပိုင်ကွက်ဆိုပြီး သီးသန့်တောင်းဆိုမှုကို ဆောင်ရွက်မပေးပါ။',
 };
 const slide_show = {
 	output: `<marquee direction="left" speed="normal" behavior="loop" class="f-4">${slide_show_text.text}</marquee>`,
@@ -25,8 +25,8 @@ const slide_show = {
 document.getElementById('custom_slide_text').innerHTML = slide_show.output;
 
 // Timer
-let count = 15;
-const defaultCount = 15;
+let count = 60;
+const defaultCount = 60;
 document.getElementById('countDown').innerText = defaultCount;
 setInterval((output) => {
 	if (count > 0) {
@@ -222,7 +222,7 @@ window.onload = async (data, day, week) => {
 	document.getElementById('result').innerText = result;
 };
 
-// Fetch Meow Data
+// Fetch Meow Data Main();
 const pjk_Meow = async () => {
 	const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
 	const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
@@ -270,25 +270,39 @@ pjk_Meow_3();
 
 // // 4:30 PM Callback and output to html
 const four_pm = () => {
-	let second_Data = JSON.parse(localStorage.getItem('evening'));
+	let date = new Date().getHours();
+	setInterval(() => {
+		try {
+			let second_Data = JSON.parse(localStorage.getItem('evening'));
 
-	const setSec = document.getElementById('setSec');
-	const valueSec = document.getElementById('valueSec');
-	const resultSec = document.getElementById('resultSec');
+			const setSec = document.getElementById('setSec');
+			const valueSec = document.getElementById('valueSec');
+			const resultSec = document.getElementById('resultSec');
 
-	if (localStorage.length <= 0) {
-		setSec.innerText = 'Hi';
-		valueSec.innerText = 'Chan';
-		resultSec.innerText = 'Lay';
-	}
+			// If there is no any data in LS, this condition will run
+			if (localStorage.length <= 0) {
+				setSec.innerText = '------';
+				valueSec.innerText = '-------';
+				resultSec.innerText = '??';
+			}
 
-	// Destructuring 12:00 PM Result
-	const { set, val, result } = second_Data;
+			// Remove result in the midnight
+			if (date >= 24 && date <= 00) {
+				setSec.innerText = '------';
+				valueSec.innerText = '-------';
+				resultSec.innerText = '??';
+			}
+			// Destructuring 12:00 PM Result
+			const { set, val, result } = second_Data;
 
-	// Check time and get data
-	setSec.innerText = set;
-	valueSec.innerText = val;
-	resultSec.innerText = result;
+			// Check time and get data
+			setSec.innerText = set;
+			valueSec.innerText = val;
+			resultSec.innerText = result;
+		} catch (error) {
+			console.log(error);
+		}
+	}, 2000);
 };
 four_pm();
 
@@ -324,23 +338,38 @@ pjk_Meow_4();
 
 // // 12:00 PM Callback and output to html
 const twelve_pm = () => {
-	let third_Data = JSON.parse(localStorage.getItem('afternoon'));
+	let date = new Date().getHours();
+	setInterval(() => {
+		try {
+			let third_Data = JSON.parse(localStorage.getItem('afternoon'));
 
-	const setThird = document.getElementById('setThird');
-	const valueThird = document.getElementById('valueThird');
-	const resultThird = document.getElementById('resultThird');
+			const setThird = document.getElementById('setThird');
+			const valueThird = document.getElementById('valueThird');
+			const resultThird = document.getElementById('resultThird');
 
-	if (third_Data === null) {
-		setThird.innerText = 'Hi';
-		valueThird.innerText = 'Chan';
-		resultThird.innerText = 'Lay';
-	}
-	// Destructuring 12:00 PM Result
-	const { set, val, result } = third_Data;
+			// If there is no any data in LS, this condition will run
+			if (third_Data === null) {
+				setThird.innerText = '------';
+				valueThird.innerText = '-------';
+				resultThird.innerText = '??';
+			}
 
-	// Check time and get data
-	setThird.innerText = set;
-	valueThird.innerText = val;
-	resultThird.innerText = result;
+			// Remove result in the midnight
+			if (date >= 24 && date <= 00) {
+				setThird.innerText = '------';
+				valueThird.innerText = '-------';
+				resultThird.innerText = '??';
+			}
+			// Destructuring 12:00 PM Result
+			const { set, val, result } = third_Data;
+
+			// Check time and get data
+			setThird.innerText = set;
+			valueThird.innerText = val;
+			resultThird.innerText = result;
+		} catch (error) {
+			console.log(error);
+		}
+	}, 2000);
 };
 twelve_pm();
