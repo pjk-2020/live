@@ -54,6 +54,39 @@ body {
 .countDown {
 	width: 1.5em;
 	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	border-radius: 50%;
+	background: #a1a1a1;
+	color: #fff;
+}
+
+/* chatIcon */
+.chatIcon {
+	width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	border-radius: 50%;
+	background: #a1a1a1;
+	color: #fff;
+}
+
+/* phoneIcon */
+.phoneIcon {
+	width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	border-radius: 50%;
+	background: #a1a1a1;
+	color: #fff;
 }
 
 /* reload */
@@ -62,21 +95,27 @@ body {
 	justify-content: center;
 	align-items: center;
 	transition: 0.5s;
-	/* width: 1.5em;
-	height: 1.5em; */
+	width: 1.5em;
+	height: 1.5em;
 	border-radius: 50%;
 	cursor: pointer;
 	overflow: hidden;
-}
 
-.reload:hover,
-.reload:focus {
-	background: #575758;
+	background: #a1a1a1;
 	color: #fff;
+
 	-webkit-animation: spin 4s linear infinite;
 	-moz-animation: spin 4s linear infinite;
 	animation: spin 4s linear infinite;
 }
+
+/* .reload:hover,
+.reload:focus {
+	background: #0122df;
+	-webkit-animation: spin 4s linear infinite;
+	-moz-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite;
+} */
 
 /* rotate 360 degree animation */
 @-moz-keyframes spin {
@@ -104,7 +143,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	margin-top: -44px;
+	margin-bottom: -15px;
 	padding: 70px;
 	width: 60px;
 	height: 60px;
