@@ -54,7 +54,7 @@ document.getElementById('custom_slide_text').innerHTML = slide_show.output;
 chatIcon = document.getElementById('chatIcon').innerHTML = chat_icon;
 setTimeout(() => {
 	document.getElementById('chatIcon').addEventListener('click', () => {
-		alert('Will you open it?');
+		// alert('Will you open it?');
 		window.open('https://chat.itcung.com/act/join/820/JxoEP7/', '_blank');
 	});
 }, 1000);
@@ -63,7 +63,7 @@ setTimeout(() => {
 document.getElementById('saveIcon').innerHTML = save_icon;
 setTimeout(() => {
 	document.getElementById('saveIcon').addEventListener('click', () => {
-		alert('Will you open it?');
+		// alert('Will you open it?');
 		window.open('https://twod.itcung.com/his/', '_blank');
 	});
 }, 1000);
@@ -72,7 +72,7 @@ setTimeout(() => {
 document.querySelector('#eyesIcon').innerHTML = eyes_icon;
 setTimeout(() => {
 	document.getElementById('eyesIcon').addEventListener('click', () => {
-		alert('Will you open it?');
+		// alert('Will you open it?');
 		window.open('https://twod.itcung.com/lucky/', '_blank');
 	});
 }, 1000);
@@ -81,7 +81,7 @@ setTimeout(() => {
 document.querySelector('#diceIcon').innerHTML = dice_3;
 setTimeout(() => {
 	document.getElementById('diceIcon').addEventListener('click', () => {
-		alert('Will you open it?');
+		// alert('Will you open it?');
 		window.open('https://twod.itcung.com/3d/', '_blank');
 	});
 }, 1000);
