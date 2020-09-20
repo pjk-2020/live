@@ -52,27 +52,39 @@ document.getElementById('custom_slide_text').innerHTML = slide_show.output;
 
 // Chat Icon
 chatIcon = document.getElementById('chatIcon').innerHTML = chat_icon;
-document.getElementById('chatIcon').addEventListener('click', () => {
-	window.open('https://chat.itcung.com/act/join/820/JxoEP7/', '_blank');
-});
+setTimeout(() => {
+	document.getElementById('chatIcon').addEventListener('click', () => {
+		alert('Will you open it?');
+		window.open('https://chat.itcung.com/act/join/820/JxoEP7/', '_blank');
+	});
+}, 1000);
 
 // 2D History Icon
 document.getElementById('saveIcon').innerHTML = save_icon;
-document.getElementById('saveIcon').addEventListener('click', () => {
-	window.open('https://twod.itcung.com/his/', '_blank');
-});
+setTimeout(() => {
+	document.getElementById('saveIcon').addEventListener('click', () => {
+		alert('Will you open it?');
+		window.open('https://twod.itcung.com/his/', '_blank');
+	});
+}, 1000);
 
 // Eyes Icon
 document.querySelector('#eyesIcon').innerHTML = eyes_icon;
-document.getElementById('eyesIcon').addEventListener('click', () => {
-	window.open('https://twod.itcung.com/lucky/', '_blank');
-});
+setTimeout(() => {
+	document.getElementById('eyesIcon').addEventListener('click', () => {
+		alert('Will you open it?');
+		window.open('https://twod.itcung.com/lucky/', '_blank');
+	});
+}, 1000);
 
 // Dice Icon
 document.querySelector('#diceIcon').innerHTML = dice_3;
-document.getElementById('diceIcon').addEventListener('click', () => {
-	window.open('https://twod.itcung.com/3d/', '_blank');
-});
+setTimeout(() => {
+	document.getElementById('diceIcon').addEventListener('click', () => {
+		alert('Will you open it?');
+		window.open('https://twod.itcung.com/3d/', '_blank');
+	});
+}, 1000);
 
 // Reload Icon
 document.querySelector('#custom-Reload-icon').innerHTML = reload_icon;
@@ -362,10 +374,12 @@ const four_pm = () => {
 			}
 
 			// Remove result in the midnight
-			if (date >= 24 && date <= 00) {
-				setSec.innerText = '------';
-				valueSec.innerText = '-------';
-				resultSec.innerText = '??';
+			if (date >= 24 && date <= 6) {
+				localStorage.clear();
+
+				// setSec.innerText = '------';
+				// valueSec.innerText = '-------';
+				// resultSec.innerText = '??';
 			}
 			// Destructuring 12:00 PM Result
 			const { set, val, result } = second_Data;
@@ -430,10 +444,11 @@ const twelve_pm = () => {
 			}
 
 			// Remove result in the midnight
-			if (date >= 24 && date <= 00) {
-				setThird.innerText = '------';
-				valueThird.innerText = '-------';
-				resultThird.innerText = '??';
+			if (date >= 24 && date <= 6) {
+				localStorage.clear();
+				// setThird.innerText = '------';
+				// valueThird.innerText = '-------';
+				// resultThird.innerText = '??';
 			}
 			// Destructuring 12:00 PM Result
 			const { set, val, result } = third_Data;
