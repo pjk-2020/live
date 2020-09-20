@@ -103,10 +103,6 @@ body {
 
 	background: #a1a1a1;
 	color: #fff;
-
-	-webkit-animation: spin 4s linear infinite;
-	-moz-animation: spin 4s linear infinite;
-	animation: spin 4s linear infinite;
 }
 
 /* .reload:hover,
