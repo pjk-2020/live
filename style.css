@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-	max-width: 640px;
+	max-width: 700px;
 }
 
 /* Padauk Unicode */
@@ -98,23 +98,18 @@ body {
 	height: 1.5em;
 	border-radius: 50%;
 	cursor: pointer;
-	overflow: hidden;
 
 	background: #a1a1a1;
 	color: #fff;
-
-	-webkit-animation: spin 4s linear infinite;
-	-moz-animation: spin 4s linear infinite;
-	animation: spin 4s linear infinite;
 }
 
-/* .reload:hover,
+.reload:hover,
 .reload:focus {
-	background: #0122df;
+	background: #f3176b;
 	-webkit-animation: spin 4s linear infinite;
 	-moz-animation: spin 4s linear infinite;
-	animation: spin 4s linear infinite;
-} */
+	animation: spin 2s linear infinite;
+}
 
 /* rotate 360 degree animation */
 @-moz-keyframes spin {
@@ -142,7 +137,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	margin-bottom: -2px;
 	padding: 70px;
 	width: 60px;
 	height: 60px;
