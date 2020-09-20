@@ -374,7 +374,7 @@ const four_pm = () => {
 			}
 
 			// Remove result in the midnight
-			if (date >= 24 && date <= 6) {
+			if (date <= 6) {
 				localStorage.clear();
 
 				// setSec.innerText = '------';
@@ -444,7 +444,7 @@ const twelve_pm = () => {
 			}
 
 			// Remove result in the midnight
-			if (date >= 24 && date <= 6) {
+			if (date <= 6) {
 				localStorage.clear();
 				// setThird.innerText = '------';
 				// valueThird.innerText = '-------';
