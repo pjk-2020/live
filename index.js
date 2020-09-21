@@ -354,7 +354,7 @@ const pjk_Meow_4 = async (h, m) => {
 	m = new Date().getMinutes();
 
 	try {
-		if ((h >= 12 && h <= 13) || (h >= 12 && h <= 1)) {
+		if (h >= 12 || (h <= 13 && h <= 1)) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -388,7 +388,7 @@ const twelve_pm = (h) => {
 			// If there is no any data in LS, this condition will run
 			if (
 				localStorage.length <= 0 ||
-				localStorage.getItem('evening') === null
+				localStorage.getItem('afternoon') === null
 			) {
 				setSec.innerText = '------';
 				valueSec.innerText = '-------';
