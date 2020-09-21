@@ -20,6 +20,7 @@ const icon_group = {
 	eyes_icon: `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z"/> <path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/> </svg>`,
 	dice_3: `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dice-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M13 1H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/> <circle cx="4" cy="4" r="1.5"/> <circle cx="12" cy="12" r="1.5"/> <circle cx="8" cy="8" r="1.5"/> </svg>`,
 	phone_icon: `<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-phone" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/> <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/> </svg>`,
+	cone_striped: `<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-cone-striped" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M9.97 4.88l.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/> </svg>`,
 };
 const {
 	chat_icon,
@@ -31,6 +32,7 @@ const {
 	eyes_icon,
 	dice_3,
 	phone_icon,
+	cone_striped,
 } = icon_group;
 
 // Reload
@@ -41,7 +43,7 @@ reload.addEventListener('click', () => reloadPage());
 // Slide show announce
 const slide_show_text = {
 	text:
-		'ည(၁၀)နာရီကျော်ဝန်းကျင်၌ ထိုးရမည့် ဂဏန်း(၅)ကွက်ကို မနက်/ည အတွက် ပေါက်ပေး ၃သောင်းစနစ်ဖြင့်သာ စီစဉ်ပေးလျှက်ရှိပါသည်။ 09 955 435 625 သို့ ၂လုံး၊၃လုံး မနက်/ည လိုချင်ပါသည်ဟု စာပို့ထားပါရန်။ ဖုန်းခေါ်တာမျိုးကို ပြန်လည်ဖြေကြားမှုမပြုလုပ်ပေးပါ။ အပိုင်ကွက်ဆိုပြီး သီးသန့်တောင်းဆိုမှုကို ဆောင်ရွက်မပေးပါ။ သဘောတူမှသာ မက်ဆေ့ချ်ပို့ဖို့ ပန်ကြားအပ်ပါသည်။ အာချောင်ပြီး ပေါက်ကရလုပ်တဲ့သူများဝေးဝေးရှောင်ပါတယ်။ လိုအပ်ပါက ဒီနေရာမှာ ထပ်မံဖြည့်စွက်ဖော်ပြပါမည်။',
+		'ည(၁၀)နာရီကျော်ဝန်းကျင်၌ ထိုးရမည့် ဂဏန်း(၅)ကွက်ကို မနက်/ည အတွက် ပေါက်ပေး ၃သောင်းစနစ်ဖြင့်သာ အလိုအလျောက်ပေးပို့သည့် စနစ်ဖြင့်ဆောင်ရွက်နေပါသည်။ 09 955 435 625 သို့ ၂လုံး၊၃လုံး မနက်/ည လိုချင်ပါသည်ဟု စာပို့ထားပါရန်။ ဖုန်းခေါ်တာမျိုးကို ပြန်လည်ဖြေကြားမှုမပြုလုပ်ပေးပါ။ အပိုင်ကွက်ဆိုပြီး သီးသန့်တောင်းဆိုမှုကို ဆောင်ရွက်မပေးပါ။ သဘောတူမှသာ မက်ဆေ့ချ်ပို့ဖို့ ပန်ကြားအပ်ပါသည်။ အာချောင်ပြီး ပေါက်ကရလုပ်တဲ့သူများဝေးဝေးရှောင်ပါတယ်။ လိုအပ်ပါက ဒီနေရာမှာ ထပ်မံဖြည့်စွက်ဖော်ပြပါမည်။',
 };
 const slide_show = {
 	output: `<marquee direction="left" speed="normal" behavior="loop" class="f-4">${slide_show_text.text}</marquee>`,
@@ -107,6 +109,9 @@ document.querySelector('#custom-Calendar-icon').innerHTML = calendar_icon;
 
 // Market Icon
 document.querySelector('.custom-Market-icon').innerHTML = market_icon_1;
+
+// Cone Strike Icon
+document.querySelector('#cone_striped').innerHTML = cone_striped;
 
 // Reload page in every 15 second
 setInterval(() => reloadPage(), 60000);
