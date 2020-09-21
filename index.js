@@ -354,7 +354,7 @@ const pjk_Meow_4 = async (h, m) => {
 	m = new Date().getMinutes();
 
 	try {
-		if (h >= 12 || (h <= 13 && h <= 1)) {
+		if (h >= 12 && m === 3) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -424,7 +424,7 @@ const pjk_Meow_3 = async (h, m) => {
 	m = new Date().getMinutes();
 
 	try {
-		if ((h >= 16 && h <= 17) || (h <= 4 && h >= 17)) {
+		if ((h >= 16 && m === 32) || (h <= 17 && h <= 4)) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
