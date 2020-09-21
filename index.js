@@ -251,7 +251,7 @@ window.onload = async (data, day, week) => {
 		document.getElementById('marketStatus').innerText = Intermission;
 	} else if (market === 'Open(II)') {
 		document.getElementById('marketIcon').innerHTML = door_open;
-		document.getElementById('marketStatus').innerText = Open_II;
+		document.getElementById('marketStatus').innerText = Pre_Open_II;
 	} else if (market === 'Pre-Open2') {
 		document.getElementById('marketIcon').innerHTML = door_open;
 		document.getElementById('marketStatus').innerText = Pre_Open_2;
@@ -377,40 +377,38 @@ pjk_Meow_4();
 // 12:00 PM Callback and output to html
 const twelve_pm = (h) => {
 	h = new Date().getHours();
-	setInterval(() => {
-		try {
-			let third_Data = JSON.parse(localStorage.getItem('afternoon'));
+	try {
+		let third_Data = JSON.parse(localStorage.getItem('afternoon'));
 
-			const setThird = document.getElementById('setThird');
-			const valueThird = document.getElementById('valueThird');
-			const resultThird = document.getElementById('resultThird');
+		const setThird = document.getElementById('setThird');
+		const valueThird = document.getElementById('valueThird');
+		const resultThird = document.getElementById('resultThird');
 
-			// If there is no any data in LS, this condition will run
-			if (
-				localStorage.length <= 0 ||
-				localStorage.getItem('afternoon') === null
-			) {
-				setSec.innerText = '------';
-				valueSec.innerText = '-------';
-				resultSec.innerText = '??';
-			}
-
-			// Remove result in the morning time
-			if (h <= 6) {
-				localStorage.removeItem('afternoon');
-			}
-
-			// Destructuring 12:00 PM Result
-			const { set, val, result } = third_Data;
-
-			// Check time and get data
-			setThird.innerText = set;
-			valueThird.innerText = val;
-			resultThird.innerText = result;
-		} catch (error) {
-			console.log(error);
+		// If there is no any data in LS, this condition will run
+		if (
+			localStorage.length <= 0 ||
+			localStorage.getItem('afternoon') === null
+		) {
+			setThird.innerText = '------';
+			valueThird.innerText = '-------';
+			resultThird.innerText = '??';
 		}
-	}, 1000);
+
+		// Remove result in the morning time
+		if (h <= 6) {
+			localStorage.removeItem('afternoon');
+		}
+
+		// Destructuring 12:00 PM Result
+		const { set, val, result } = third_Data;
+
+		// Check time and get data
+		setThird.innerText = set;
+		valueThird.innerText = val;
+		resultThird.innerText = result;
+	} catch (error) {
+		console.log(error);
+	}
 };
 twelve_pm();
 
@@ -447,39 +445,34 @@ pjk_Meow_3();
 // 4:30 PM Callback and output to html
 const four_pm = (h) => {
 	h = new Date().getHours();
-	setInterval(() => {
-		try {
-			let second_Data = JSON.parse(localStorage.getItem('evening'));
+	try {
+		let second_Data = JSON.parse(localStorage.getItem('evening'));
 
-			const setSec = document.getElementById('setSec');
-			const valueSec = document.getElementById('valueSec');
-			const resultSec = document.getElementById('resultSec');
+		const setSec = document.getElementById('setSec');
+		const valueSec = document.getElementById('valueSec');
+		const resultSec = document.getElementById('resultSec');
 
-			// If there is no any data in LS, this condition will run
-			if (
-				localStorage.length <= 0 ||
-				localStorage.getItem('evening') === null
-			) {
-				setSec.innerText = '------';
-				valueSec.innerText = '-------';
-				resultSec.innerText = '??';
-			}
-
-			// Remove result in the morning time
-			if (h <= 6) {
-				localStorage.removeItem('evening');
-			}
-
-			// Destructuring 12:00 PM Result
-			const { set, val, result } = second_Data;
-
-			// Check time and get data
-			setSec.innerText = set;
-			valueSec.innerText = val;
-			resultSec.innerText = result;
-		} catch (error) {
-			console.log(error);
+		// If there is no any data in LS, this condition will run
+		if (localStorage.length <= 0 || localStorage.getItem('evening') === null) {
+			setSec.innerText = '------';
+			valueSec.innerText = '-------';
+			resultSec.innerText = '??';
 		}
-	}, 2000);
+
+		// Remove result in the morning time
+		if (h <= 6) {
+			localStorage.removeItem('evening');
+		}
+
+		// Destructuring 12:00 PM Result
+		const { set, val, result } = second_Data;
+
+		// Check time and get data
+		setSec.innerText = set;
+		valueSec.innerText = val;
+		resultSec.innerText = result;
+	} catch (error) {
+		console.log(error);
+	}
 };
 four_pm();
