@@ -66,13 +66,14 @@ body {
 	transition: 0.5s;
 	border-radius: 50%;
 	background: #a1a1a1;
-	color: rgb(58, 58, 58);
+	color: #fff;
 	transition: 0.5s;
 }
 
 .countDown:hover,
 .countDown:focus {
 	background: #ffee03;
+	color: #000000;
 }
 
 /* chatIcon */
