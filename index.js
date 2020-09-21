@@ -253,13 +253,16 @@ window.onload = async (data, day, week) => {
 		document.getElementById('marketIcon').innerHTML = door_open;
 		document.getElementById('marketStatus').innerText = Open_II;
 	} else if (market === 'Pre-Open2') {
-		document.getElementById('marketIcon').innerHTML = door_close;
+		document.getElementById('marketIcon').innerHTML = door_open;
 		document.getElementById('marketStatus').innerText = Pre_Open_2;
 	} else if (market === 'Pre-Open(II)') {
-		document.getElementById('marketIcon').innerHTML = door_close;
+		document.getElementById('marketIcon').innerHTML = door_open;
 		document.getElementById('marketStatus').innerText = Pre_Open_II;
+	} else if (market === 'Pre-Open(III)') {
+		document.getElementById('marketIcon').innerHTML = door_open;
+		document.getElementById('marketStatus').innerText = Pre_Open_III;
 	} else if (market === 'Pre-Open(Iv)') {
-		document.getElementById('marketIcon').innerHTML = door_close;
+		document.getElementById('marketIcon').innerHTML = door_open;
 		document.getElementById('marketStatus').innerText = Pre_Open_Iv;
 	} else if (market === 'Pre-close') {
 		document.getElementById('marketIcon').innerHTML = door_close;
