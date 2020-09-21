@@ -38,10 +38,6 @@ const reload = document.getElementById('reload');
 // Add Event Listener
 reload.addEventListener('click', () => reloadPage());
 
-// Reload page in every 15 second
-setInterval(() => reloadPage(), 60000);
-const reloadPage = () => window.location.reload();
-
 // Slide show announce
 const slide_show_text = {
 	text:
@@ -112,9 +108,13 @@ document.querySelector('#custom-Calendar-icon').innerHTML = calendar_icon;
 // Market Icon
 document.querySelector('.custom-Market-icon').innerHTML = market_icon_1;
 
+// Reload page in every 15 second
+setInterval(() => reloadPage(), 15000);
+const reloadPage = () => window.location.reload();
+
 // Timer
-let count = 60;
-const defaultCount = 60;
+let count = 15;
+const defaultCount = 15;
 document.getElementById('countDown').innerText = defaultCount;
 setInterval((output) => {
 	if (count > 0) {
