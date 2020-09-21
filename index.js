@@ -388,7 +388,7 @@ const twelve_pm = (h) => {
 
 		// Remove result in the midnight
 		if (h <= 6) {
-			localStorage.clear();
+			localStorage.removeItem('afternoon');
 			// setThird.innerText = '------';
 			// valueThird.innerText = '-------';
 			// resultThird.innerText = '??';
@@ -457,7 +457,7 @@ const four_pm = (h) => {
 
 			// Remove result in the midnight
 			if (h <= 6) {
-				localStorage.clear();
+				localStorage.removeItem('evening');
 
 				// setSec.innerText = '------';
 				// valueSec.innerText = '-------';
