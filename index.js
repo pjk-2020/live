@@ -173,9 +173,10 @@ window.onload = async (data, day, week) => {
 	let marketStatus = {
 		Closed: 'ဈေးကွက်ပိတ်ပြီ။',
 		Pre_Open_I: 'နံနက်အကြို',
-		Pre_Open_II: 'ညနေအကြိုပိတ်',
-		Pre_Open_III: 'ညနေအကြိုပိတ်',
-		Pre_Open_Iv: 'ညနေအကြိုပိတ်',
+		Pre_Open_II: 'ညနေအကြိုဖွင့်',
+		Pre_Open_2: 'ညနေအကြိုဖွင့်',
+		Pre_Open_III: 'ညနေအကြိုဖွင့်',
+		Pre_Open_Iv: 'ညနေအကြိုဖွင့်',
 		Pre_Close: 'ညနေအကြိုပိတ်',
 		Open_I: 'နံနက်ဈေးကွက်',
 		Intermission: 'နံနက်ပိတ်',
@@ -188,6 +189,7 @@ window.onload = async (data, day, week) => {
 		Closed,
 		Pre_Open_I,
 		Pre_Open_II,
+		Pre_Open_2,
 		Pre_Open_III,
 		Pre_Open_Iv,
 		Pre_Close,
@@ -252,11 +254,11 @@ window.onload = async (data, day, week) => {
 		document.getElementById('marketStatus').innerText = Open_II;
 	} else if (market === 'Pre-Open2') {
 		document.getElementById('marketIcon').innerHTML = door_close;
-		document.getElementById('marketStatus').innerText = Pre_Open_II;
+		document.getElementById('marketStatus').innerText = Pre_Open_2;
 	} else if (market === 'Pre-Open(II)') {
 		document.getElementById('marketIcon').innerHTML = door_close;
-		document.getElementById('marketStatus').innerText = Pre_Open_III;
-	} else if (market === 'Pre-Open(2)') {
+		document.getElementById('marketStatus').innerText = Pre_Open_II;
+	} else if (market === 'Pre-Open(Iv)') {
 		document.getElementById('marketIcon').innerHTML = door_close;
 		document.getElementById('marketStatus').innerText = Pre_Open_Iv;
 	} else if (market === 'Pre-close') {
@@ -349,7 +351,7 @@ const pjk_Meow_4 = async (h, m) => {
 	m = new Date().getMinutes();
 
 	try {
-		if (h >= 12 || h <= 13 || h <= 1) {
+		if ((h >= 12 && h <= 13) || (h >= 12 && h <= 1)) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -372,38 +374,40 @@ pjk_Meow_4();
 // 12:00 PM Callback and output to html
 const twelve_pm = (h) => {
 	h = new Date().getHours();
-	try {
-		let third_Data = JSON.parse(localStorage.getItem('afternoon'));
+	setInterval(() => {
+		try {
+			let third_Data = JSON.parse(localStorage.getItem('afternoon'));
 
-		const setThird = document.getElementById('setThird');
-		const valueThird = document.getElementById('valueThird');
-		const resultThird = document.getElementById('resultThird');
+			const setThird = document.getElementById('setThird');
+			const valueThird = document.getElementById('valueThird');
+			const resultThird = document.getElementById('resultThird');
 
-		// If there is no any data in LS, this condition will run
-		if (third_Data === null) {
-			setThird.innerText = '------';
-			valueThird.innerText = '-------';
-			resultThird.innerText = '??';
+			// If there is no any data in LS, this condition will run
+			if (
+				localStorage.length <= 0 ||
+				localStorage.getItem('evening') === null
+			) {
+				setSec.innerText = '------';
+				valueSec.innerText = '-------';
+				resultSec.innerText = '??';
+			}
+
+			// Remove result in the morning time
+			if (h <= 6) {
+				localStorage.removeItem('afternoon');
+			}
+
+			// Destructuring 12:00 PM Result
+			const { set, val, result } = third_Data;
+
+			// Check time and get data
+			setThird.innerText = set;
+			valueThird.innerText = val;
+			resultThird.innerText = result;
+		} catch (error) {
+			console.log(error);
 		}
-
-		// Remove result in the midnight
-		if (h <= 6) {
-			localStorage.removeItem('afternoon');
-			// setThird.innerText = '------';
-			// valueThird.innerText = '-------';
-			// resultThird.innerText = '??';
-		}
-
-		// Destructuring 12:00 PM Result
-		const { set, val, result } = third_Data;
-
-		// Check time and get data
-		setThird.innerText = set;
-		valueThird.innerText = val;
-		resultThird.innerText = result;
-	} catch (error) {
-		console.log(error);
-	}
+	}, 1000);
 };
 twelve_pm();
 
@@ -417,7 +421,7 @@ const pjk_Meow_3 = async (h, m) => {
 	m = new Date().getMinutes();
 
 	try {
-		if ((h <= 16 && h >= 17) || (h <= 4 && h <= 5)) {
+		if ((h >= 16 && h <= 17) || (h <= 4 && h >= 17)) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -449,19 +453,18 @@ const four_pm = (h) => {
 			const resultSec = document.getElementById('resultSec');
 
 			// If there is no any data in LS, this condition will run
-			if (localStorage.length <= 0) {
+			if (
+				localStorage.length <= 0 ||
+				localStorage.getItem('evening') === null
+			) {
 				setSec.innerText = '------';
 				valueSec.innerText = '-------';
 				resultSec.innerText = '??';
 			}
 
-			// Remove result in the midnight
+			// Remove result in the morning time
 			if (h <= 6) {
 				localStorage.removeItem('evening');
-
-				// setSec.innerText = '------';
-				// valueSec.innerText = '-------';
-				// resultSec.innerText = '??';
 			}
 
 			// Destructuring 12:00 PM Result
