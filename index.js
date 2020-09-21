@@ -355,7 +355,7 @@ const pjk_Meow_4 = async () => {
 	let current_time = new Date().toLocaleTimeString();
 
 	try {
-		if (current_time >= custom_time && current_time === custom_time) {
+		if (current_time === custom_time) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -400,7 +400,7 @@ const twelve_pm = () => {
 			let current_time = new Date().toLocaleTimeString();
 
 			// Remove result in the morning time
-			if (current_time >= custom_time && current_time === custom_time) {
+			if (current_time === custom_time) {
 				localStorage.removeItem('afternoon');
 			}
 
@@ -429,7 +429,12 @@ const pjk_Meow_3 = async () => {
 	let custom_time_2 = '4:32:12 PM';
 	let current_time = new Date().toLocaleTimeString();
 	try {
-		if (current_time >= custom_time && current_time === custom_time_2) {
+		if (
+			current_time === custom_time ||
+			current_time === custom_time_2 ||
+			current_time >= custom_time ||
+			current_time === custom_time_2
+		) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -473,7 +478,7 @@ const four_pm = () => {
 			let current_time = new Date().toLocaleTimeString();
 
 			// Remove result in the morning time
-			if (current_time >= custom_time && current_time === custom_time) {
+			if (current_time === custom_time) {
 				localStorage.removeItem('evening');
 			}
 
