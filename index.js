@@ -343,17 +343,6 @@ const pjk_Meow = async () => {
 	} catch (error) {
 		console.log(error);
 	}
-
-	// Remove result in the morning time
-	let morning_time_1 = '6:00:10 AM';
-	let morning_time_2 = '06:00:10 AM';
-	let current_time = new Date().toLocaleTimeString();
-
-	// Remove result in the morning time
-	if (current_time === morning_time_1 || current_time === morning_time_2) {
-		localStorage.removeItem('afternoon');
-		localStorage.removeItem('evening');
-	}
 };
 
 /* ---------------------------------------------------------------------- */
@@ -367,11 +356,11 @@ const pjk_Meow_4 = async () => {
 	const pjk_meow = atob(base);
 
 	// Set default time what I want it to.
-	let afternoon_time_1 = '12:03:12 PM';
-	let current_time = new Date().toLocaleTimeString();
+	let af_1 = '12:03:12 PM';
+	let c_t = new Date().toLocaleTimeString();
 
 	try {
-		if (current_time === afternoon_time_1 || current_time >= afternoon_time_1) {
+		if (c_t === af_1 || c_t <= af_1) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -408,6 +397,16 @@ const twelve_pm = () => {
 				resultThird.innerText = '??';
 			}
 
+			// Remove result in the morning time
+			let m_1 = '12:00:10 AM';
+			let m_2 = '00:00:10 AM';
+			let c_t = new Date().toLocaleTimeString();
+
+			// Remove result in the morning time
+			if (c_t === m_1 || c_t === m_2) {
+				localStorage.clear();
+			}
+
 			// Destructuring 12:00 PM Result
 			const { set, val, result } = third_Data;
 
@@ -422,22 +421,21 @@ const twelve_pm = () => {
 };
 twelve_pm();
 
-// 4:30 PM Request Data
+// // 4:30 PM Request Data
 const pjk_Meow_3 = async () => {
 	const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
 	const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
 	const pjk_meow = atob(base);
 
 	// Set default time what I want it to.
-	let evening_time_1 = '16:32:12 PM';
-	let evening_time_2 = '4:32:12 PM';
-	let evening_time_3 = '04:32:12 PM';
-	let current_time = new Date().toLocaleTimeString();
+	let et_1 = '16:32:12 PM';
+	let et_2 = '4:32:12 PM';
+	let et_3 = '04:32:12 PM';
+	let c_t = new Date().toLocaleTimeString();
 	try {
 		if (
-			current_time === evening_time_1 ||
-			current_time === evening_time_2 ||
-			current_time === evening_time_3
+			(c_t === et_1 && c_t === et_2 && c_t === et_3) ||
+			(c_t >= et_1 && c_t >= et_2 && c_t >= et_3)
 		) {
 			try {
 				const res = await fetch(cors + pjk_meow);

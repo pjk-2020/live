@@ -72,7 +72,7 @@ body {
 
 .countDown:hover,
 .countDown:focus {
-	background: #f3176b;
+	background: #ffee03;
 }
 
 /* chatIcon */
@@ -92,7 +92,7 @@ body {
 
 .chatIcon:hover,
 .chatIcon:focus {
-	background: #f3176b;
+	background: #165ad8;
 }
 
 /* phoneIcon */
@@ -112,7 +112,7 @@ body {
 
 .saveIcon:hover,
 .saveIcon:focus {
-	background: #f3176b;
+	background: #486845;
 }
 
 /* eyesIcon */
@@ -132,7 +132,7 @@ body {
 
 .eyesIcon:hover,
 .eyesIcon:focus {
-	background: #f3176b;
+	background: #2e8591;
 }
 
 /* diceIcon */
@@ -152,7 +152,7 @@ body {
 
 .diceIcon:hover,
 .diceIcon:focus {
-	background: #f3176b;
+	background: #dd19dd;
 }
 
 /* phoneIcon */
@@ -172,7 +172,7 @@ body {
 
 .phoneIcon:hover,
 .phoneIcon:focus {
-	background: #f3176b;
+	background: #ffa468;
 }
 
 /* cone_striped */
