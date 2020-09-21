@@ -323,6 +323,16 @@ window.onload = async (data, day, week) => {
 	document.getElementById('set').innerText = set;
 	document.getElementById('value').innerText = val;
 	document.getElementById('result').innerText = result;
+
+	// Remove result in the morning time
+	let m_1 = '12:00:10 AM';
+	let m_2 = '00:00:10 AM';
+	let c_t = new Date().toLocaleTimeString();
+
+	// Remove result in the morning time
+	if ((c_t === m_1 && c_t === m_2) || (c_t <= m_1 && c_t <= m_2)) {
+		localStorage.clear();
+	}
 };
 
 /* ---------------------------------------------------------------------- */
@@ -395,16 +405,6 @@ const twelve_pm = () => {
 				setThird.innerText = '------';
 				valueThird.innerText = '-------';
 				resultThird.innerText = '??';
-			}
-
-			// Remove result in the morning time
-			let m_1 = '12:00:10 AM';
-			let m_2 = '00:00:10 AM';
-			let c_t = new Date().toLocaleTimeString();
-
-			// Remove result in the morning time
-			if (c_t === m_1 || c_t === m_2) {
-				localStorage.clear();
 			}
 
 			// Destructuring 12:00 PM Result
