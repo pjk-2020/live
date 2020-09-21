@@ -179,7 +179,7 @@ body {
 	border-radius: 50%;
 	background: #a1a1a1;
 	color: #fff;
-	cursor: pointer;
+	/* cursor: pointer; */
 	transition: 0.5s;
 }
 
