@@ -343,6 +343,17 @@ const pjk_Meow = async () => {
 	} catch (error) {
 		console.log(error);
 	}
+
+	// Remove result in the morning time
+	let morning_time_1 = '6:00:10 AM';
+	let morning_time_2 = '06:00:10 AM';
+	let current_time = new Date().toLocaleTimeString();
+
+	// Remove result in the morning time
+	if (current_time === morning_time_1 || current_time === morning_time_2) {
+		localStorage.removeItem('afternoon');
+		localStorage.removeItem('evening');
+	}
 };
 
 /* ---------------------------------------------------------------------- */
@@ -356,11 +367,11 @@ const pjk_Meow_4 = async () => {
 	const pjk_meow = atob(base);
 
 	// Set default time what I want it to.
-	let custom_time = '12:03:12 PM';
+	let afternoon_time_1 = '12:03:12 PM';
 	let current_time = new Date().toLocaleTimeString();
 
 	try {
-		if (current_time === custom_time) {
+		if (current_time === afternoon_time_1 || current_time >= afternoon_time_1) {
 			try {
 				const res = await fetch(cors + pjk_meow);
 				const data = await res.json();
@@ -391,22 +402,10 @@ const twelve_pm = () => {
 			const resultThird = document.getElementById('resultThird');
 
 			// If there is no any data in LS, this condition will run
-			if (
-				localStorage.length <= 0 ||
-				localStorage.getItem('afternoon') === null
-			) {
+			if (localStorage.length <= 0 || localStorage === undefined) {
 				setThird.innerText = '------';
 				valueThird.innerText = '-------';
 				resultThird.innerText = '??';
-			}
-
-			// Remove result in the morning time
-			let custom_time = '6:00:10 AM';
-			let current_time = new Date().toLocaleTimeString();
-
-			// Remove result in the morning time
-			if (current_time === custom_time) {
-				localStorage.removeItem('afternoon');
 			}
 
 			// Destructuring 12:00 PM Result
@@ -430,15 +429,15 @@ const pjk_Meow_3 = async () => {
 	const pjk_meow = atob(base);
 
 	// Set default time what I want it to.
-	let custom_time = '16:32:12 PM';
-	let custom_time_2 = '4:32:12 PM';
+	let evening_time_1 = '16:32:12 PM';
+	let evening_time_2 = '4:32:12 PM';
+	let evening_time_3 = '04:32:12 PM';
 	let current_time = new Date().toLocaleTimeString();
 	try {
 		if (
-			current_time === custom_time ||
-			current_time === custom_time_2 ||
-			current_time >= custom_time ||
-			current_time === custom_time_2
+			current_time === evening_time_1 ||
+			current_time === evening_time_2 ||
+			current_time === evening_time_3
 		) {
 			try {
 				const res = await fetch(cors + pjk_meow);
@@ -470,21 +469,10 @@ const four_pm = () => {
 			const resultSec = document.getElementById('resultSec');
 
 			// If there is no any data in LS, this condition will run
-			if (
-				localStorage.length <= 0 ||
-				localStorage.getItem('evening') === null
-			) {
+			if (localStorage.length <= 0 || localStorage === undefined) {
 				setSec.innerText = '------';
 				valueSec.innerText = '-------';
 				resultSec.innerText = '??';
-			}
-
-			let custom_time = '6:00:10 AM';
-			let current_time = new Date().toLocaleTimeString();
-
-			// Remove result in the morning time
-			if (current_time === custom_time) {
-				localStorage.removeItem('evening');
 			}
 
 			// Destructuring 12:00 PM Result
