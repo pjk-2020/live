@@ -109,12 +109,12 @@ document.querySelector('#custom-Calendar-icon').innerHTML = calendar_icon;
 document.querySelector('.custom-Market-icon').innerHTML = market_icon_1;
 
 // Reload page in every 15 second
-setInterval(() => reloadPage(), 15000);
+setInterval(() => reloadPage(), 60000);
 const reloadPage = () => window.location.reload();
 
 // Timer
-let count = 15;
-const defaultCount = 15;
+let count = 60;
+const defaultCount = 60;
 document.getElementById('countDown').innerText = defaultCount;
 setInterval((output) => {
 	if (count > 0) {
