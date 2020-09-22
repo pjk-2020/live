@@ -330,10 +330,15 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		// Remove result in the morning time
 		let m_1 = '6:00:00 AM';
 		let m_2 = '06:00:00 AM';
+		let d = new Date().getHours();
 		let c_t = new Date().toLocaleTimeString();
 
 		// Remove result in the morning time
 		if (c_t === m_1 || c_t === m_2 || c_t >= m_1 || c_t <= m_2) {
+			localStorage.clear();
+		}
+
+		if (d <= 6) {
 			localStorage.clear();
 		}
 	};
