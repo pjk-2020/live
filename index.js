@@ -328,15 +328,18 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		document.getElementById('result').innerText = result;
 
 		// Remove result in the morning time
-		let m_1 = '6:00:00 AM';
-		let m_2 = '06:00:00 AM';
-		let d = new Date().getHours();
-		let c_t = new Date().toLocaleTimeString();
-
-		// Remove result in the morning time
-		if (c_t === m_1 || c_t === m_2 || c_t >= m_1 || c_t <= m_2) {
+		// let m_1 = '6:00:00 AM';
+		// let m_2 = '06:00:00 AM';
+		// let c_t = new Date().toLocaleTimeString();
+		let current_time = new Date().getHours();
+		if (current_time <= 6 || current_time >= 7) {
 			localStorage.clear();
 		}
+
+		// Remove result in the morning time
+		// if (c_t === m_1 || c_t === m_2 || c_t >= m_1 || c_t <= m_2) {
+		// 	localStorage.clear();
+		// }
 
 		if (d <= 6) {
 			localStorage.clear();
@@ -374,11 +377,13 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		const pjk_meow = atob(base);
 
 		// Set default time what I want it to.
-		let af_1 = '12:03:12 PM';
-		let c_t = new Date().toLocaleTimeString();
+		// let af_1 = '12:03:12 PM';
+		// let c_t = new Date().toLocaleTimeString();
+
+		let current_time = new Date().getHours();
 
 		try {
-			if (c_t === af_1 || c_t <= af_1) {
+			if (current_time === 12 || current_time <= 13) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -436,15 +441,14 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		const pjk_meow = atob(base);
 
 		// Set default time what I want it to.
-		let et_1 = '16:32:12 PM';
-		let et_2 = '4:32:12 PM';
-		let et_3 = '04:32:12 PM';
-		let c_t = new Date().toLocaleTimeString();
+		// let et_1 = '16:32:12 PM';
+		// let et_2 = '4:32:12 PM';
+		// let et_3 = '04:32:12 PM';
+		// let c_t = new Date().toLocaleTimeString();
+
+		let current_time = new Date().getHours();
 		try {
-			if (
-				(c_t === et_1 && c_t === et_2 && c_t === et_3) ||
-				(c_t >= et_1 && c_t >= et_2 && c_t >= et_3)
-			) {
+			if (current_time <= 17 || current_time >= 18) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
