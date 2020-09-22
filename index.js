@@ -332,7 +332,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		// let m_2 = '06:00:00 AM';
 		// let c_t = new Date().toLocaleTimeString();
 		let current_time = new Date().getHours();
-		if (current_time <= 6 || current_time >= 7) {
+		if (current_time <= 6 || current_time === 7) {
 			localStorage.clear();
 		}
 
