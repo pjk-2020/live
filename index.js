@@ -375,7 +375,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		let c_t = new Date().toLocaleTimeString();
 
 		try {
-			if (c_t === af_1) {
+			if (c_t === af_1 || c_t >= af_1) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
