@@ -409,7 +409,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 				if (localStorage.length <= 0 || localStorage === undefined) {
 					setThird.innerText = '------';
 					valueThird.innerText = '-------';
-					resultThird.innerText = '??';
+					resultThird.innerText = '--';
 				}
 
 				// Destructuring 12:00 PM Result
@@ -475,7 +475,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 				if (localStorage.length <= 0 || localStorage === undefined) {
 					setSec.innerText = '------';
 					valueSec.innerText = '-------';
-					resultSec.innerText = '??';
+					resultSec.innerText = '--';
 				}
 
 				// Destructuring 12:00 PM Result
