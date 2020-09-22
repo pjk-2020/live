@@ -117,12 +117,12 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 	document.querySelector('#cone_striped').innerHTML = cone_striped;
 
 	// Reload page in every 15 second
-	setInterval(() => reloadPage(), 20000);
+	setInterval(() => reloadPage(), 35000);
 	const reloadPage = () => window.location.reload();
 
 	// Timer
-	let count = 20;
-	const defaultCount = 20;
+	let count = 35;
+	const defaultCount = 35;
 	document.getElementById('countDown').innerText = defaultCount;
 	setInterval((output) => {
 		if (count > 0) {
@@ -373,7 +373,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		let c_t = new Date().toLocaleTimeString();
 
 		try {
-			if (c_t === af_1 || c_t >= af_1) {
+			if (c_t === af_1 || c_t <= af_1) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
