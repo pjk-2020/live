@@ -333,7 +333,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		let c_t = new Date().toLocaleTimeString();
 
 		// Remove result in the morning time
-		if (c_t === m_1 || c_t === m_2) {
+		if (c_t === m_1 || c_t === m_2 || c_t >= m_1 || c_t <= m_2) {
 			localStorage.clear();
 		}
 	};
