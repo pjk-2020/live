@@ -1,8 +1,6 @@
 (function () {
 	('use strict');
 
-	localStorage.removeItem('afternoon');
-
 	// Welcome console
 	console.log(`
 Hi, What are you looking for?
