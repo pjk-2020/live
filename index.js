@@ -1,7 +1,7 @@
 (function () {
 	('use strict');
 
-	// localStorage.clear();
+	localStorage.clear();
 
 	// Welcome console
 	console.log(`
@@ -119,12 +119,12 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 	document.querySelector('#cone_striped').innerHTML = cone_striped;
 
 	// Reload page in every 15 second
-	setInterval(() => reloadPage(), 60000);
+	setInterval(() => reloadPage(), 20000);
 	const reloadPage = () => window.location.reload();
 
 	// Timer
-	let count = 60;
-	const defaultCount = 60;
+	let count = 20;
+	const defaultCount = 20;
 	document.getElementById('countDown').innerText = defaultCount;
 	setInterval((output) => {
 		if (count > 0) {
@@ -364,131 +364,131 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 	/* -------------------------- Schedule and Save to Local Storage ------------------------- */
 	/* ---------------------------------------------------------------------- */
 
-	// // 12:00 PM Request Data
-	const pjk_Meow_4 = async () => {
-		const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
-		const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
-		const pjk_meow = atob(base);
+	// // // 12:00 PM Request Data
+	// const pjk_Meow_4 = async () => {
+	// 	const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
+	// 	const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
+	// 	const pjk_meow = atob(base);
 
-		// Set default time what I want it to.
-		let af_1 = '12:03:12 PM';
-		let c_t = new Date().toLocaleTimeString();
+	// 	// Set default time what I want it to.
+	// 	let af_1 = '12:03:12 PM';
+	// 	let c_t = new Date().toLocaleTimeString();
 
-		try {
-			if (c_t === af_1 || c_t >= af_1) {
-				try {
-					const res = await fetch(cors + pjk_meow);
-					const data = await res.json();
+	// 	try {
+	// 		if (c_t === af_1) {
+	// 			try {
+	// 				const res = await fetch(cors + pjk_meow);
+	// 				const data = await res.json();
 
-					// Working with LS
-					let data_serialized = JSON.stringify(data);
-					localStorage.setItem('afternoon', data_serialized);
+	// 				// Working with LS
+	// 				let data_serialized = JSON.stringify(data);
+	// 				localStorage.setItem('afternoon', data_serialized);
 
-					return data_serialized;
-				} catch (error) {
-					console.log(error);
-				}
-			}
-		} catch (error) {
-			console.log(error);
-		}
-	};
-	pjk_Meow_4();
+	// 				return data_serialized;
+	// 			} catch (error) {
+	// 				console.log(error);
+	// 			}
+	// 		}
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 	}
+	// };
+	// pjk_Meow_4();
 
-	// 12:00 PM Callback and output to html
-	const twelve_pm = () => {
-		setInterval(() => {
-			try {
-				let third_Data = JSON.parse(localStorage.getItem('afternoon'));
+	// // 12:00 PM Callback and output to html
+	// const twelve_pm = () => {
+	// 	setInterval(() => {
+	// 		try {
+	// 			let third_Data = JSON.parse(localStorage.getItem('afternoon'));
 
-				const setThird = document.getElementById('setThird');
-				const valueThird = document.getElementById('valueThird');
-				const resultThird = document.getElementById('resultThird');
+	// 			const setThird = document.getElementById('setThird');
+	// 			const valueThird = document.getElementById('valueThird');
+	// 			const resultThird = document.getElementById('resultThird');
 
-				// If there is no any data in LS, this condition will run
-				if (localStorage.length <= 0 || localStorage === undefined) {
-					setThird.innerText = '------';
-					valueThird.innerText = '-------';
-					resultThird.innerText = '??';
-				}
+	// 			// If there is no any data in LS, this condition will run
+	// 			if (localStorage.length <= 0 || localStorage === undefined) {
+	// 				setThird.innerText = '------';
+	// 				valueThird.innerText = '-------';
+	// 				resultThird.innerText = '??';
+	// 			}
 
-				// Destructuring 12:00 PM Result
-				const { set, val, result } = third_Data;
+	// 			// Destructuring 12:00 PM Result
+	// 			const { set, val, result } = third_Data;
 
-				// Check time and get data
-				setThird.innerText = set;
-				valueThird.innerText = val;
-				resultThird.innerText = result;
-			} catch (error) {
-				console.log(error);
-			}
-		}, 3000);
-	};
-	twelve_pm();
+	// 			// Check time and get data
+	// 			setThird.innerText = set;
+	// 			valueThird.innerText = val;
+	// 			resultThird.innerText = result;
+	// 		} catch (error) {
+	// 			console.log(error);
+	// 		}
+	// 	}, 3000);
+	// };
+	// twelve_pm();
 
-	// // 4:30 PM Request Data
-	const pjk_Meow_3 = async () => {
-		const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
-		const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
-		const pjk_meow = atob(base);
+	// // // 4:30 PM Request Data
+	// const pjk_Meow_3 = async () => {
+	// 	const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
+	// 	const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
+	// 	const pjk_meow = atob(base);
 
-		// Set default time what I want it to.
-		let et_1 = '16:32:12 PM';
-		let et_2 = '4:32:12 PM';
-		let et_3 = '04:32:12 PM';
-		let c_t = new Date().toLocaleTimeString();
-		try {
-			if (
-				(c_t === et_1 && c_t === et_2 && c_t === et_3) ||
-				(c_t >= et_1 && c_t >= et_2 && c_t >= et_3)
-			) {
-				try {
-					const res = await fetch(cors + pjk_meow);
-					const data = await res.json();
+	// 	// Set default time what I want it to.
+	// 	let et_1 = '16:32:12 PM';
+	// 	let et_2 = '4:32:12 PM';
+	// 	let et_3 = '04:32:12 PM';
+	// 	let c_t = new Date().toLocaleTimeString();
+	// 	try {
+	// 		if (
+	// 			(c_t === et_1 && c_t === et_2 && c_t === et_3) ||
+	// 			(c_t >= et_1 && c_t >= et_2 && c_t >= et_3)
+	// 		) {
+	// 			try {
+	// 				const res = await fetch(cors + pjk_meow);
+	// 				const data = await res.json();
 
-					// Working with LS
-					let data_serialized = JSON.stringify(data);
-					localStorage.setItem('evening', data_serialized);
+	// 				// Working with LS
+	// 				let data_serialized = JSON.stringify(data);
+	// 				localStorage.setItem('evening', data_serialized);
 
-					return data_serialized;
-				} catch (error) {
-					console.log(error);
-				}
-			}
-		} catch (error) {
-			console.log(error);
-		}
-	};
-	pjk_Meow_3();
+	// 				return data_serialized;
+	// 			} catch (error) {
+	// 				console.log(error);
+	// 			}
+	// 		}
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 	}
+	// };
+	// pjk_Meow_3();
 
-	// 4:30 PM Callback and output to html
-	const four_pm = () => {
-		setInterval(() => {
-			try {
-				let second_Data = JSON.parse(localStorage.getItem('evening'));
+	// // 4:30 PM Callback and output to html
+	// const four_pm = () => {
+	// 	setInterval(() => {
+	// 		try {
+	// 			let second_Data = JSON.parse(localStorage.getItem('evening'));
 
-				const setSec = document.getElementById('setSec');
-				const valueSec = document.getElementById('valueSec');
-				const resultSec = document.getElementById('resultSec');
+	// 			const setSec = document.getElementById('setSec');
+	// 			const valueSec = document.getElementById('valueSec');
+	// 			const resultSec = document.getElementById('resultSec');
 
-				// If there is no any data in LS, this condition will run
-				if (localStorage.length <= 0 || localStorage === undefined) {
-					setSec.innerText = '------';
-					valueSec.innerText = '-------';
-					resultSec.innerText = '??';
-				}
+	// 			// If there is no any data in LS, this condition will run
+	// 			if (localStorage.length <= 0 || localStorage === undefined) {
+	// 				setSec.innerText = '------';
+	// 				valueSec.innerText = '-------';
+	// 				resultSec.innerText = '??';
+	// 			}
 
-				// Destructuring 12:00 PM Result
-				const { set, val, result } = second_Data;
+	// 			// Destructuring 12:00 PM Result
+	// 			const { set, val, result } = second_Data;
 
-				// Check time and get data
-				setSec.innerText = set;
-				valueSec.innerText = val;
-				resultSec.innerText = result;
-			} catch (error) {
-				console.log(error);
-			}
-		}, 3000);
-	};
-	four_pm();
+	// 			// Check time and get data
+	// 			setSec.innerText = set;
+	// 			valueSec.innerText = val;
+	// 			resultSec.innerText = result;
+	// 		} catch (error) {
+	// 			console.log(error);
+	// 		}
+	// 	}, 3000);
+	// };
+	// four_pm();
 })();
