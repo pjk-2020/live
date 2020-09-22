@@ -340,10 +340,6 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		// if (c_t === m_1 || c_t === m_2 || c_t >= m_1 || c_t <= m_2) {
 		// 	localStorage.clear();
 		// }
-
-		if (d <= 6) {
-			localStorage.clear();
-		}
 	};
 
 	/* ---------------------------------------------------------------------- */
