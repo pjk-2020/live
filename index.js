@@ -354,7 +354,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 
 			return data;
 		} catch (error) {
-			console.log(error);
+			return false;
 		}
 	};
 
@@ -386,11 +386,11 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 
 					return data_serialized;
 				} catch (error) {
-					console.log(error);
+					return false;
 				}
 			}
 		} catch (error) {
-			console.log(error);
+			return false;
 		}
 	};
 	pjk_Meow_4();
@@ -420,7 +420,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 				valueThird.innerText = val;
 				resultThird.innerText = result;
 			} catch (error) {
-				console.log(error);
+				return false;
 			}
 		}, 3000);
 	};
@@ -453,11 +453,11 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 
 					return data_serialized;
 				} catch (error) {
-					console.log(error);
+					console.log(error.message);
 				}
 			}
 		} catch (error) {
-			console.log(error);
+			return false;
 		}
 	};
 	pjk_Meow_3();
@@ -487,7 +487,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 				valueSec.innerText = val;
 				resultSec.innerText = result;
 			} catch (error) {
-				console.log(error);
+				return false;
 			}
 		}, 3000);
 	};
