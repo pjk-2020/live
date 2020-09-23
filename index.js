@@ -327,19 +327,15 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		document.getElementById('value').innerText = val;
 		document.getElementById('result').innerText = result;
 
-		// Remove result in the morning time
-		// let m_1 = '6:00:00 AM';
-		// let m_2 = '06:00:00 AM';
-		// let c_t = new Date().toLocaleTimeString();
-		// let current_time = new Date().getHours();
-		// if (current_time === 6 || current_time <= 7) {
-		// 	localStorage.clear();
-		// }
+		// Remove all the result in the morning time
+		setTimeout(() => {
+			let d_time = '00:00:00 AM';
+			let current_time = new Date().toLocaleTimeString();
 
-		// Remove result in the morning time
-		// if (c_t === m_1 || c_t === m_2 || c_t >= m_1 || c_t <= m_2) {
-		// 	localStorage.clear();
-		// }
+			if (current_time === d_time) {
+				localStorage.clear();
+			}
+		}, 3000);
 	};
 
 	/* ---------------------------------------------------------------------- */
@@ -373,13 +369,13 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		const pjk_meow = atob(base);
 
 		// Set default time what I want it to.
-		let af_1 = '12:03:12 PM';
-		let c_t = new Date().toLocaleTimeString();
+		let d_time = '12:03:12 PM';
+		let current_time = new Date().toLocaleTimeString();
 
 		// let current_time = new Date().getHours();
 
 		try {
-			if (true) {
+			if (current_time === d_time) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -400,98 +396,100 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 	pjk_Meow_4();
 
 	// 12:00 PM Callback and output to html
-	// const twelve_pm = () => {
-	// 	setInterval(() => {
-	// 		try {
-	// 			let third_Data = JSON.parse(localStorage.getItem('afternoon'));
+	const twelve_pm = () => {
+		setInterval(() => {
+			try {
+				let third_Data = JSON.parse(localStorage.getItem('afternoon'));
 
-	// 			const setThird = document.getElementById('setThird');
-	// 			const valueThird = document.getElementById('valueThird');
-	// 			const resultThird = document.getElementById('resultThird');
+				const setThird = document.getElementById('setThird');
+				const valueThird = document.getElementById('valueThird');
+				const resultThird = document.getElementById('resultThird');
 
-	// 			// If there is no any data in LS, this condition will run
-	// 			if (localStorage.length <= 0 || localStorage === undefined) {
-	// 				setThird.innerText = '------';
-	// 				valueThird.innerText = '-------';
-	// 				resultThird.innerText = '--';
-	// 			}
+				// If there is no any data in LS, this condition will run
+				if (localStorage.length <= 0 || localStorage === undefined) {
+					setThird.innerText = '------';
+					valueThird.innerText = '-------';
+					resultThird.innerText = '--';
+				}
 
-	// 			// Destructuring 12:00 PM Result
-	// 			const { set, val, result } = third_Data;
+				// Destructuring 12:00 PM Result
+				const { set, val, result } = third_Data;
 
-	// 			// Check time and get data
-	// 			setThird.innerText = set;
-	// 			valueThird.innerText = val;
-	// 			resultThird.innerText = result;
-	// 		} catch (error) {
-	// 			console.log(error);
-	// 		}
-	// 	}, 3000);
-	// };
-	// twelve_pm();
+				// Check time and get data
+				setThird.innerText = set;
+				valueThird.innerText = val;
+				resultThird.innerText = result;
+			} catch (error) {
+				console.log(error);
+			}
+		}, 3000);
+	};
+	twelve_pm();
 
-	// // // 4:30 PM Request Data
-	// const pjk_Meow_3 = async () => {
-	// 	const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
-	// 	const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
-	// 	const pjk_meow = atob(base);
+	// // 4:30 PM Request Data
+	const pjk_Meow_3 = async () => {
+		const base = 'aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw==';
+		const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
+		const pjk_meow = atob(base);
 
-	// 	// Set default time what I want it to.
-	// 	let et_1 = '16:32:12 PM';
-	// 	let et_2 = '4:32:12 PM';
-	// 	let et_3 = '04:32:12 PM';
-	// 	let c_t = new Date().toLocaleTimeString();
+		// Set default time what I want it to.
+		// let et_1 = '16:32:12 PM';
+		// let et_2 = '4:32:12 PM';
+		// let et_3 = '04:32:12 PM';
+		let d_time_1 = '04:35:00 PM';
+		let d_time_2 = '16:35:00 PM';
+		let current_time = new Date().toLocaleTimeString();
 
-	// 	// let current_time = new Date().getHours();
-	// 	try {
-	// 		if (true) {
-	// 			try {
-	// 				const res = await fetch(cors + pjk_meow);
-	// 				const data = await res.json();
+		// let current_time = new Date().getHours();
+		try {
+			if (current_time === d_time_1 || current_time >= d_time_2) {
+				try {
+					const res = await fetch(cors + pjk_meow);
+					const data = await res.json();
 
-	// 				// Working with LS
-	// 				let data_serialized = JSON.stringify(data);
-	// 				localStorage.setItem('evening', data_serialized);
+					// Working with LS
+					let data_serialized = JSON.stringify(data);
+					localStorage.setItem('evening', data_serialized);
 
-	// 				return data_serialized;
-	// 			} catch (error) {
-	// 				console.log(error);
-	// 			}
-	// 		}
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// };
-	// pjk_Meow_3();
+					return data_serialized;
+				} catch (error) {
+					console.log(error);
+				}
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
+	pjk_Meow_3();
 
-	// // 4:30 PM Callback and output to html
-	// const four_pm = () => {
-	// 	setInterval(() => {
-	// 		try {
-	// 			let second_Data = JSON.parse(localStorage.getItem('evening'));
+	// 4:30 PM Callback and output to html
+	const four_pm = () => {
+		setInterval(() => {
+			try {
+				let second_Data = JSON.parse(localStorage.getItem('evening'));
 
-	// 			const setSec = document.getElementById('setSec');
-	// 			const valueSec = document.getElementById('valueSec');
-	// 			const resultSec = document.getElementById('resultSec');
+				const setSec = document.getElementById('setSec');
+				const valueSec = document.getElementById('valueSec');
+				const resultSec = document.getElementById('resultSec');
 
-	// 			// If there is no any data in LS, this condition will run
-	// 			if (localStorage.length <= 0 || localStorage === undefined) {
-	// 				setSec.innerText = '------';
-	// 				valueSec.innerText = '-------';
-	// 				resultSec.innerText = '--';
-	// 			}
+				// If there is no any data in LS, this condition will run
+				if (localStorage.length <= 0 || localStorage === undefined) {
+					setSec.innerText = '------';
+					valueSec.innerText = '-------';
+					resultSec.innerText = '--';
+				}
 
-	// 			// Destructuring 12:00 PM Result
-	// 			const { set, val, result } = second_Data;
+				// Destructuring 12:00 PM Result
+				const { set, val, result } = second_Data;
 
-	// 			// Check time and get data
-	// 			setSec.innerText = set;
-	// 			valueSec.innerText = val;
-	// 			resultSec.innerText = result;
-	// 		} catch (error) {
-	// 			console.log(error);
-	// 		}
-	// 	}, 3000);
-	// };
-	// four_pm();
+				// Check time and get data
+				setSec.innerText = set;
+				valueSec.innerText = val;
+				resultSec.innerText = result;
+			} catch (error) {
+				console.log(error);
+			}
+		}, 3000);
+	};
+	four_pm();
 })();
