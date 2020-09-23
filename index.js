@@ -332,7 +332,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		// let m_2 = '06:00:00 AM';
 		// let c_t = new Date().toLocaleTimeString();
 		let current_time = new Date().getHours();
-		if (current_time <= 6 || current_time === 7) {
+		if (current_time === 6 || current_time <= 7) {
 			localStorage.clear();
 		}
 
@@ -373,13 +373,13 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		const pjk_meow = atob(base);
 
 		// Set default time what I want it to.
-		// let af_1 = '12:03:12 PM';
-		// let c_t = new Date().toLocaleTimeString();
+		let af_1 = '12:03:12 PM';
+		let c_t = new Date().toLocaleTimeString();
 
-		let current_time = new Date().getHours();
+		// let current_time = new Date().getHours();
 
 		try {
-			if (current_time === 12 || current_time <= 13) {
+			if (true) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -437,14 +437,14 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		const pjk_meow = atob(base);
 
 		// Set default time what I want it to.
-		// let et_1 = '16:32:12 PM';
-		// let et_2 = '4:32:12 PM';
-		// let et_3 = '04:32:12 PM';
-		// let c_t = new Date().toLocaleTimeString();
+		let et_1 = '16:32:12 PM';
+		let et_2 = '4:32:12 PM';
+		let et_3 = '04:32:12 PM';
+		let c_t = new Date().toLocaleTimeString();
 
-		let current_time = new Date().getHours();
+		// let current_time = new Date().getHours();
 		try {
-			if (current_time <= 17 || current_time >= 18) {
+			if (true) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
