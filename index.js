@@ -58,7 +58,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 	setTimeout(() => {
 		document.getElementById('chatIcon').addEventListener('click', () => {
 			// alert('Will you open it?');
-			window.open('https://chat.itcung.com/act/join/820/JxoEP7/', '_blank');
+			window.open('https://chat.itcung.com/act/join/820/JxoEP7/', '_self');
 		});
 	}, 200);
 
@@ -67,7 +67,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 	setTimeout(() => {
 		document.getElementById('saveIcon').addEventListener('click', () => {
 			// alert('Will you open it?');
-			window.open('https://twod.itcung.com/his/', '_blank');
+			window.open('https://twod.itcung.com/his/', '_self');
 		});
 	}, 200);
 
@@ -76,7 +76,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 	setTimeout(() => {
 		document.getElementById('eyesIcon').addEventListener('click', () => {
 			// alert('Will you open it?');
-			window.open('https://twod.itcung.com/lucky/', '_blank');
+			window.open('https://twod.itcung.com/lucky/', '_self');
 		});
 	}, 200);
 
@@ -85,7 +85,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 	setTimeout(() => {
 		document.getElementById('diceIcon').addEventListener('click', () => {
 			// alert('Will you open it?');
-			window.open('https://twod.itcung.com/3d/', '_blank');
+			window.open('https://twod.itcung.com/3d/', '_self');
 		});
 	}, 200);
 
@@ -96,7 +96,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 			// alert('Will you open it?');
 			window.open(
 				'sms://+9509955435625?body=%23Unicode%0A2D%2F3D%20%E1%80%99%E1%80%94%E1%80%80%E1%80%BA%2F%E1%80%8A%20%E1%80%95%E1%80%B1%E1%80%AB%E1%80%80%E1%80%BA%E1%80%95%E1%80%B1%E1%80%B8%E1%80%9C%E1%80%AD%E1%80%AF%E1%80%81%E1%80%BB%E1%80%84%E1%80%BA%E1%80%95%E1%80%AB%E1%80%9E%E1%80%8A%E1%80%BA%E1%81%8B%0A%23Zawgyi%0A2D%2F3D%20%E1%80%99%E1%80%94%E1%80%80%E1%80%B9%2F%E1%80%8A%20%E1%80%B1%E1%80%95%E1%80%AB%E1%80%80%E1%80%B9%E1%80%B1%E1%80%95%E1%80%B8%E1%80%9C%E1%80%AD%E1%80%AF%E1%80%81%E1%80%BA%E1%80%84%E1%80%B9%E1%80%95%E1%80%AB%E1%80%9E%E1%80%8A%E1%80%B9%E1%81%8B',
-				'_blank'
+				'_self'
 			);
 		});
 	}, 200);
