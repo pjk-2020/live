@@ -96,6 +96,10 @@ body {
 	background: #165ad8;
 }
 
+.chatIcon:active {
+	background: coral;
+}
+
 /* phoneIcon */
 .saveIcon {
 	width: 1.5em;
@@ -114,6 +118,10 @@ body {
 .saveIcon:hover,
 .saveIcon:focus {
 	background: #486845;
+}
+
+.saveIcon:active {
+	background: coral;
 }
 
 /* eyesIcon */
@@ -136,6 +144,10 @@ body {
 	background: #2e8591;
 }
 
+.eyesIcon:active {
+	background: coral;
+}
+
 /* diceIcon */
 .diceIcon {
 	width: 1.5em;
@@ -154,6 +166,10 @@ body {
 .diceIcon:hover,
 .diceIcon:focus {
 	background: #dd19dd;
+}
+
+.diceIcon:active {
+	background: coral;
 }
 
 /* phoneIcon */
@@ -176,6 +192,10 @@ body {
 	background: #ffa468;
 }
 
+.phoneIcon:active {
+	background: coral;
+}
+
 /* cone_striped */
 .cone_striped {
 	width: 1.5em;
@@ -194,6 +214,10 @@ body {
 .cone_striped:hover,
 .cone_striped:focus {
 	background: #f3176b;
+}
+
+.cone_striped:active {
+	background: coral;
 }
 
 /* reload */
@@ -217,6 +241,10 @@ body {
 	-webkit-animation: spin 4s linear infinite;
 	-moz-animation: spin 4s linear infinite;
 	animation: spin 0.4s linear infinite;
+}
+
+.reload:active {
+	background: coral;
 }
 
 /* rotate 360 degree animation */
