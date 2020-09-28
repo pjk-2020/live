@@ -376,7 +376,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 		// let current_time = new Date().getHours();
 
 		try {
-			if (current_time === d_time || current_time <= d_time_2) {
+			if (current_time === d_time || current_time <= 13) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
