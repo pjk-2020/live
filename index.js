@@ -370,12 +370,13 @@ My Job is to create a simple project like this one an working with pure JS only!
 
 		// Set default time what I want it to.
 		let d_time = '12:03:12 PM';
+		let d_time_2 = '12:10:12 PM';
 		let current_time = new Date().toLocaleTimeString();
 
 		// let current_time = new Date().getHours();
 
 		try {
-			if (current_time === d_time || current_time <= d_time) {
+			if (current_time === d_time || current_time <= d_time_2) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
