@@ -374,11 +374,10 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let d = new Date();
 		let h = d.getHours();
 		let m = d.getMinutes();
-
 		let final = (m += h * 60 + 1);
 
 		try {
-			if (final === 726) {
+			if (final == 726) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -441,7 +440,6 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let m = d.getMinutes();
 		let final = h * 60;
 
-		// let current_time = new Date().getHours();
 		try {
 			if (final == 270 || final >= 990) {
 				try {
