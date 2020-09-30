@@ -1,6 +1,5 @@
 'use strict';
 (function () {
-	localStorage.clear();
 	// Welcome console
 	console.log(`
 Hi, What are you looking for?
