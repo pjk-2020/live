@@ -12,9 +12,9 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let d = new Date();
 		let h = d.getHours();
 		let m = d.getMinutes();
-		let final = (m += h * 60);
+		m += h * 60;
 
-		if (final == 360 || final >= 420) {
+		if (m == 360 || m >= 420) {
 			localStorage.clear();
 		}
 	}, 3000);
@@ -373,10 +373,10 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let d = new Date();
 		let h = d.getHours();
 		let m = d.getMinutes();
-		let final = (m += h * 60 + 1);
+		m += h * 60 + 1;
 
 		try {
-			if (final == 726) {
+			if (m == 726) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -437,10 +437,10 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let d = new Date();
 		let h = d.getHours();
 		let m = d.getMinutes();
-		let final = (m += h * 60);
+		m += h * 60;
 
 		try {
-			if (final == 270 || final >= 990) {
+			if (m == 270 || m >= 990) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
