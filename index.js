@@ -117,12 +117,12 @@ My Job is to create a simple project like this one an working with pure JS only!
 	document.querySelector('#cone_striped').innerHTML = cone_striped;
 
 	// Reload page in every 15 second
-	setInterval(() => reloadPage(), 35000);
+	// setInterval(() => reloadPage(), 35000);
 	const reloadPage = () => window.location.reload();
 
 	// Timer
-	let count = 35;
-	const defaultCount = 35;
+	let count = 0;
+	const defaultCount = 0;
 	document.getElementById('countDown').innerText = defaultCount;
 	setInterval((output) => {
 		if (count > 0) {
@@ -368,15 +368,21 @@ My Job is to create a simple project like this one an working with pure JS only!
 		const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
 		const pjk_meow = atob(base);
 
+		// Set the default time what I want to save to the localStorage
+		let d = new Date();
+		let h = d.getHours();
+		let m = d.getMinutes();
+		let compile = `${h}:${m}`;
+
 		// Set default time what I want it to.
-		let d_time = '12:03:12 PM';
-		let d_time_2 = '12:10:12 PM';
-		let current_time = new Date().toLocaleTimeString();
+		// let d_time = '12:03:12 PM';
+		// let d_time_2 = '12:10:12 PM';
+		// let current_time = new Date().toLocaleTimeString();
 
 		// let current_time = new Date().getHours();
 
 		try {
-			if (current_time === d_time || current_time <= 13) {
+			if (compile === '12:01') {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -433,17 +439,19 @@ My Job is to create a simple project like this one an working with pure JS only!
 		const cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0=');
 		const pjk_meow = atob(base);
 
-		// Set default time what I want it to.
-		// let et_1 = '16:32:12 PM';
-		// let et_2 = '4:32:12 PM';
-		// let et_3 = '04:32:12 PM';
-		let d_time_1 = '04:35:00 PM';
-		let d_time_2 = '16:35:00 PM';
-		let current_time = new Date().toLocaleTimeString();
+		// Set the default time what I want to save to the localStorage
+		let d = new Date();
+		let h = d.getHours();
+		let m = d.getMinutes();
+		let compile = `${h}:${m}`;
+
+		// let d_time_1 = '04:35:00 PM';
+		// let d_time_2 = '16:35:00 PM';
+		// let current_time = new Date().toLocaleTimeString();
 
 		// let current_time = new Date().getHours();
 		try {
-			if (current_time === d_time_1 || current_time >= d_time_2) {
+			if (compile === '4:30' || compile >= '16:30') {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
