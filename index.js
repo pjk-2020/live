@@ -14,7 +14,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let m = d.getMinutes();
 		m += h * 60;
 
-		if (m == 360 || m >= 420) {
+		if (m == 360) {
 			localStorage.clear();
 		}
 	}, 3000);
