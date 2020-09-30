@@ -1,11 +1,24 @@
 'use strict';
 (function () {
+	// localStorage.clear();
 	// Welcome console
 	console.log(`
 Hi, What are you looking for?
 My name is Chan Myae Maung but you call me as Chanlay.
 My Job is to create a simple project like this one an working with pure JS only!
 `);
+
+	// Remove all the result in the morning time
+	setTimeout(() => {
+		let d = new Date();
+		let h = d.getHours();
+		let m = d.getMinutes();
+		let final = (m += h * 60);
+
+		if (final === 360 || final >= 420) {
+			localStorage.clear();
+		}
+	}, 3000);
 
 	/* ---------------------------------------------------------------------- */
 	/* -------------------------- Icons, reload function and Date ------------------------- */
@@ -325,18 +338,6 @@ My Job is to create a simple project like this one an working with pure JS only!
 		document.getElementById('set').innerText = set;
 		document.getElementById('value').innerText = val;
 		document.getElementById('result').innerText = result;
-
-		// Remove all the result in the morning time
-		setTimeout(() => {
-			let d = new Date();
-			let h = d.getHours();
-			let m = d.getMinutes();
-			let compile = `${h}:${m}`;
-
-			if (compile === '06:00' || compile === '6:00') {
-				localStorage.clear();
-			}
-		}, 3000);
 	};
 
 	/* ---------------------------------------------------------------------- */
@@ -373,17 +374,11 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let d = new Date();
 		let h = d.getHours();
 		let m = d.getMinutes();
-		let compile = `${h}:${m}`;
 
-		// Set default time what I want it to.
-		// let d_time = '12:03:12 PM';
-		// let d_time_2 = '12:10:12 PM';
-		// let current_time = new Date().toLocaleTimeString();
-
-		// let current_time = new Date().getHours();
+		let final = (m += h * 60 + 1);
 
 		try {
-			if (compile === '12:01') {
+			if (final === 726) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -444,15 +439,11 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let d = new Date();
 		let h = d.getHours();
 		let m = d.getMinutes();
-		let compile = `${h}:${m}`;
-
-		// let d_time_1 = '04:35:00 PM';
-		// let d_time_2 = '16:35:00 PM';
-		// let current_time = new Date().toLocaleTimeString();
+		let final = h * 60;
 
 		// let current_time = new Date().getHours();
 		try {
-			if (compile === '4:30' || compile >= '16:30') {
+			if (final == 270 || final >= 990) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
