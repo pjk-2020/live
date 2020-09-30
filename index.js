@@ -2,9 +2,11 @@
 (function () {
 	// Welcome to console
 	console.log(`
-Hi, What are you looking for?
-My name is Chan Myae Maung but you call me as Chanlay.
-My Job is to create a simple project like this one an working with pure JS only!
+My name is Chan Myae Maung. It can be called friendly Chan Lay because the house calls it Chan Lay.
+
+My hobbies are people who enjoy creating simple small projects using their own ideas and Javascript.
+
+You can reference the Javscript Codes I wrote.
 `);
 
 	// Remove all the result in the morning time
@@ -41,7 +43,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 		history_icon,
 		reload_icon,
 		clock_icon,
-		calendar_icon,
+		// calendar_icon,
 		market_icon_1,
 		eyes_icon,
 		dice_3,
