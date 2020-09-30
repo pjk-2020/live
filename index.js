@@ -423,7 +423,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 			} catch (error) {
 				return false;
 			}
-		}, 3000);
+		}, 2000);
 	};
 	twelve_pm();
 
@@ -437,7 +437,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let d = new Date();
 		let h = d.getHours();
 		let m = d.getMinutes();
-		let final = h * 60;
+		let final = (m += h * 60);
 
 		try {
 			if (final == 270 || final >= 990) {
