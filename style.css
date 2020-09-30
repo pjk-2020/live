@@ -68,6 +68,7 @@ body {
 	background: #a1a1a1;
 	color: #fff;
 	transition: 0.5s;
+	background: rgb(76, 88, 99);
 }
 
 .countDown:hover,
@@ -89,6 +90,7 @@ body {
 	color: #fff;
 	cursor: pointer;
 	transition: 0.5s;
+	background: rgb(173, 139, 64);
 }
 
 .chatIcon:hover,
@@ -113,6 +115,7 @@ body {
 	color: #fff;
 	cursor: pointer;
 	transition: 0.5s;
+	background: rgb(120, 209, 47);
 }
 
 .saveIcon:hover,
@@ -137,6 +140,7 @@ body {
 	color: #fff;
 	cursor: pointer;
 	transition: 0.5s;
+	background: rgb(148, 53, 226);
 }
 
 .eyesIcon:hover,
@@ -161,6 +165,7 @@ body {
 	color: #fff;
 	cursor: pointer;
 	transition: 0.5s;
+	background: rgb(97, 80, 82);
 }
 
 .diceIcon:hover,
@@ -185,6 +190,7 @@ body {
 	color: #fff;
 	cursor: pointer;
 	transition: 0.5s;
+	background: rgb(58, 125, 180);
 }
 
 .phoneIcon:hover,
@@ -209,6 +215,7 @@ body {
 	color: #fff;
 	/* cursor: pointer; */
 	transition: 0.5s;
+	background: rgba(209, 47, 136, 0.247);
 }
 
 .cone_striped:hover,
@@ -233,6 +240,7 @@ body {
 
 	background: #a1a1a1;
 	color: #fff;
+	background: rgb(127, 126, 133);
 }
 
 .reload:hover,
