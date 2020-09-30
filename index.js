@@ -407,7 +407,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 				const resultThird = document.getElementById('resultThird');
 
 				// If there is no any data in LS, this condition will run
-				if (localStorage.length <= 0 || localStorage === undefined) {
+				if (localStorage.getItem('afternoon') === null) {
 					setThird.innerText = '------';
 					valueThird.innerText = '-------';
 					resultThird.innerText = '--';
@@ -471,7 +471,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 				const resultSec = document.getElementById('resultSec');
 
 				// If there is no any data in LS, this condition will run
-				if (localStorage.length <= 0 || localStorage === undefined) {
+				if (localStorage.getItem('evening') === null) {
 					setSec.innerText = '------';
 					valueSec.innerText = '-------';
 					resultSec.innerText = '--';
