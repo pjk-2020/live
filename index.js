@@ -185,7 +185,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 			Pre_Open_III: 'ညနေအကြိုဖွင့်',
 			Pre_Open_Iv: 'ညနေအကြိုဖွင့်',
 			Pre_Close: 'ညနေအကြိုပိတ်',
-			Open_I: 'နံနက်ဈေးကွက်ဖွင့်',
+			Open_I: 'နံနက်ဖွင့်',
 			Intermission: 'နံနက်ပိတ်',
 			Open_II: 'ညနေဈေးကွက်',
 			Off_Hour: 'ထိပ်စည်းပိတ်',
