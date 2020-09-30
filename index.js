@@ -116,12 +116,12 @@ My Job is to create a simple project like this one an working with pure JS only!
 	document.querySelector('#cone_striped').innerHTML = cone_striped;
 
 	// Reload page in every 15 second
-	// setInterval(() => reloadPage(), 35000);
+	setInterval(() => reloadPage(), 60000);
 	const reloadPage = () => window.location.reload();
 
 	// Timer
-	let count = 0;
-	const defaultCount = 0;
+	let count = 60;
+	const defaultCount = 60;
 	document.getElementById('countDown').innerText = defaultCount;
 	setInterval((output) => {
 		if (count > 0) {
@@ -328,10 +328,12 @@ My Job is to create a simple project like this one an working with pure JS only!
 
 		// Remove all the result in the morning time
 		setTimeout(() => {
-			let d_time = '00:00:00 AM';
-			let current_time = new Date().toLocaleTimeString();
+			let d = new Date();
+			let h = d.getHours();
+			let m = d.getMinutes();
+			let compile = `${h}:${m}`;
 
-			if (current_time === d_time) {
+			if (compile === '06:00' || compile === '6:00') {
 				localStorage.clear();
 			}
 		}, 3000);
