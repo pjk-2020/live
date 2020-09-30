@@ -119,7 +119,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 	document.querySelector('#custom-Clock-icon').innerHTML = clock_icon;
 
 	// Calendar Icon
-	document.querySelector('#custom-Calendar-icon').innerHTML = calendar_icon;
+	// document.querySelector('#custom-Calendar-icon').innerHTML = calendar_icon;
 
 	// Market Icon
 	document.querySelector('.custom-Market-icon').innerHTML = market_icon_1;
