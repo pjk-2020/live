@@ -151,8 +151,17 @@ My Job is to create a simple project like this one an working with pure JS only!
 	}, 1000);
 
 	// Current Date Format
-	let currentDate = new Date().toJSON().slice(0, 10);
+
+	const d = new Date();
+	const currentDate =
+		d.getDate() + '-' + (d.getMonth() + 1) + '-' + d.getFullYear();
 	document.getElementById('currentDate').innerText = currentDate;
+
+	/*
+		// Old Function
+		let currentDate = new Date().toJSON().slice(0, 10);
+		document.getElementById('currentDate').innerText = currentDate;
+	*/
 
 	/* ---------------------------------------------------------------------- */
 	/* -------------------------- Template Engine ------------------------- */
