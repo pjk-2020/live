@@ -1,7 +1,6 @@
 'use strict';
 (function () {
-	// localStorage.clear();
-	// Welcome console
+	// Welcome to console
 	console.log(`
 Hi, What are you looking for?
 My name is Chan Myae Maung but you call me as Chanlay.
@@ -15,7 +14,7 @@ My Job is to create a simple project like this one an working with pure JS only!
 		let m = d.getMinutes();
 		let final = (m += h * 60);
 
-		if (final === 360 || final >= 420) {
+		if (final == 360 || final >= 420) {
 			localStorage.clear();
 		}
 	}, 3000);
