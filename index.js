@@ -16,7 +16,7 @@ You can reference the Javscript Codes I wrote.
 		let m = d.getMinutes();
 		m += h * 60;
 
-		if (m == 360) {
+		if (m === 360) {
 			localStorage.clear();
 		}
 	}, 3000);
@@ -387,7 +387,7 @@ You can reference the Javscript Codes I wrote.
 		m += h * 60 + 1;
 
 		try {
-			if (m == 726) {
+			if (m === 726) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
@@ -451,7 +451,7 @@ You can reference the Javscript Codes I wrote.
 		m += h * 60;
 
 		try {
-			if (m == 270 || m >= 990) {
+			if (m === 270 || m >= 990) {
 				try {
 					const res = await fetch(cors + pjk_meow);
 					const data = await res.json();
