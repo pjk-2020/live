@@ -215,7 +215,7 @@ body {
 	color: #fff;
 	/* cursor: pointer; */
 	transition: 0.5s;
-	background: rgba(255, 153, 0, 0.37);
+	background: rgba(255, 153, 0, 0.144);
 }
 
 .cone_striped:hover,
