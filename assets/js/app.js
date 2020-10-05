@@ -129,31 +129,6 @@
 	};
 	// Callback Function API ONE
 	setInterval(pjkOne, 3000);
-	/* 
-	const pjkTwo = function () {
-		const request = new XMLHttpRequest(),
-			baseURL = atob('aHR0cHM6Ly90d29kLml0Y3VuZy5jb20vYXBpLw=='),
-			cors = atob('aHR0cHM6Ly9jb3JzLmNoYW5sYXkud29ya2Vycy5kZXY/dT0='),
-			resource = cors + baseURL;
-
-		request.open('GET', resource, true);
-
-		request.onload = function () {
-			try {
-				if (this.readyState === 4 && this.status === 2000) {
-					const data = JSON.parse(this.responseText);
-					console.log(data);
-				}
-			} catch (error) {
-				console.log(error.messages);
-			}
-		};
-
-		request.send();
-	};
-	// Callback Function API ONE
-	pjkTwo(); */
-
 	/* ---------------------------------------------------------------------- */
 	/* ----------------- Declare Icons, DOM Object & Add Event Listener ----------- */
 	/* ---------------------------------------------------------------------- */
@@ -237,7 +212,6 @@
 		cone_striped_Icon = document.getElementById('cone_striped_Icon'),
 		marketIcon = document.getElementById('marketIcon'),
 		marketStatus = document.getElementById('marketStatus');
-
 	// Inject Icons to HTML
 	chatIcon.innerHTML = chat_icon;
 	eyesIcon.innerHTML = eyes_icon;
@@ -313,6 +287,18 @@
 
 	// Reload Add Event Listener
 	reload.addEventListener('click', reloadPage);
+
+	// Slide show announce
+	const slide_show_text = {
+		// text:
+		// 	'နေ့စဉ် မနက်/ည ဂဏန်းများကို Facebook Messenger ခလုတ်မှ တစ်ဆင့် လာရောက်မေးမြန်းပြီး ပေါက်ပေး ၃သောင်းစနစ်ဖြင့် ဆောင်ရွက်နေပါသည်။ အာလာချောင်မည့်သူမျာ၊ ပေါက်ပြီး ပေးရမယ်ဆိုမှ လက်တွန့်နေတဲ့သူများ အတော်လေးစိတ်ပျက်စေမိတယ်။',
+		text:
+			'ည(၁၀)နာရီကျော်ဝန်းကျင်၌ ထိုးရမည့် ဂဏန်း(၅)ကွက်ကို မနက်/ည အတွက် ပေါက်ပေး ၃သောင်းစနစ်ဖြင့်သာ အလိုအလျောက်ပေးပို့သည့် စနစ်ဖြင့်ဆောင်ရွက်နေပါသည်။ 09 955 435 625 သို့ ၂လုံး၊၃လုံး မနက်/ည လိုချင်ပါသည်ဟု စာပို့ထားပါရန်။ ဖုန်းခေါ်တာမျိုးကို ပြန်လည်ဖြေကြားမှုမပြုလုပ်ပေးပါ။ အပိုင်ကွက်ဆိုပြီး သီးသန့်တောင်းဆိုမှုကို ဆောင်ရွက်မပေးပါ။ သဘောတူမှသာ မက်ဆေ့ချ်ပို့ဖို့ ပန်ကြားအပ်ပါသည်။ အာချောင်ပြီး ပေါက်ကရလုပ်တဲ့သူများမလာပါနဲ့။ လိုအပ်ပါက ဒီနေရာမှာ ထပ်မံဖြည့်စွက်ဖော်ပြပါမည်။',
+	};
+	const slide_show = {
+		output: `<marquee direction="left" speed="normal" behavior="loop" class="f-4">${slide_show_text.text}</marquee>`,
+	};
+	document.getElementById('custom_slide_text').innerHTML = slide_show.output;
 
 	// Day of week
 	let day = new Date();
