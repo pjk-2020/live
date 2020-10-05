@@ -128,7 +128,7 @@
 		request.send();
 	};
 	// Callback Function API ONE
-	pjkOne();
+	setInterval(pjkOne, 3000);
 	/* 
 	const pjkTwo = function () {
 		const request = new XMLHttpRequest(),
