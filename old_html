@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta
+			http-equiv="Cache-Control"
+			content="no-cache, no-store, must-revalidate"
+		/>
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta
+			name="description"
+			content="The best 100% correct Thai Myanmar 2D3D in Burma. Realtime update data."
+		/>
+		<title>Thai-Myanmar 2D3D</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/litera/bootstrap.min.css"
+			integrity="sha512-iKbrjHn3GnahCXWH0mr6Rxqog4NY9hCPjtf3x3ab0tWMyV0MUAHpNyIJoIwaMY05FGJNEW7e59X/9UAM7KOP6A=="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+			integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body class="no_select">
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>
+			window.fbAsyncInit = function () {
+				FB.init({
+					xfbml: true,
+					version: 'v8.0',
+				});
+			};
+
+			(function (d, s, id) {
+				var js,
+					fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+				fjs.parentNode.insertBefore(js, fjs);
+			})(document, 'script', 'facebook-jssdk');
+		</script>
+
+		<!-- Your Chat Plugin code -->
+		<div
+			class="fb-customerchat bg-light"
+			attribution="setup_tool"
+			page_id="101111448435503"
+			logged_in_greeting="မနက်/ည ပေါက်ဂဏန်းလာယူပါရန်။"
+			logged_out_greeting="မနက်/ည ပေါက်ဂဏန်းလာယူပါရန်။"
+		></div>
+		<main>
+			<div class="container my-2">
+				<div class="card card-body mb-1">
+					<!-- Count Down and Reload Panel -->
+					<div class="d-flex justify-content-between align-items-center">
+						<!-- countdown -->
+						<div id="countDown" class="countDown p-2 shadow"></div>
+
+						<!-- Chat Icon -->
+						<div id="chatIcon" class="chatIcon p-1 shadow"></div>
+
+						<!-- Lucky Eyes Icon -->
+						<div id="eyesIcon" class="eyesIcon p-1 shadow"></div>
+
+						<!-- History Icon -->
+						<div id="saveIcon" class="saveIcon p-1 shadow"></div>
+
+						<!-- Dice Icon -->
+						<div id="diceIcon" class="diceIcon p-1 shadow"></div>
+
+						<!-- Phone Icon -->
+						<div id="phoneIcon" class="phoneIcon p-1 shadow"></div>
+
+						<!-- reload icon -->
+						<div id="reload" class="reload p-1 shadow">
+							<div id="custom-Reload-icon"></div>
+						</div>
+					</div>
+
+					<!-- End of Count Down and Reload Panel -->
+
+					<!-- Start 2D Result -->
+					<div class="d-flex justify-content-between align-items-center my-5">
+						<!-- set -->
+						<div class="card-text">
+							<div class="text-left textShadow-1 f-5">ထိပ်စည်း</div>
+							<p id="set" class="f-2 font-weight-bold">0,000.00</p>
+						</div>
+						<!-- 2D Digit -->
+						<div class="card-text result-digit">
+							<div
+								class="f-3 animate__animated animate__heartBeat animate__slow animate__infinite infinite"
+								id="result"
+							>
+								..
+							</div>
+						</div>
+						<!-- value -->
+						<div class="card-text">
+							<div class="text-right textShadow-1 f-5">နောက်ပိတ်</div>
+							<p id="value" class="f-2 font-weight-bold text-right">0,000.00</p>
+						</div>
+					</div>
+					<!-- Clock and market status -->
+					<!-- Slide show announce -->
+					<div class="d-flex justify-content-between align-items-center">
+						<div
+							id="cone_striped"
+							class="cone_striped p-1 mr-3 shadow-sm"
+						></div>
+						<div id="custom_slide_text" class="d-inline-block text-muted"></div>
+					</div>
+
+					<div
+						class="d-flex justify-content-between align-items-center text-center"
+					>
+						<!-- Clock -->
+						<div class="card-text" id="custom-Clock-icon">
+							<span class="d-inline-block f-2 font-weight-bold" id="clock"
+								>16:32:30 PM</span
+							>
+						</div>
+
+						<!-- Update Date -->
+						<div class="card-text">
+							<span id="custom-Calendar-icon" class="d-inline-block"></span>
+							<span id="currentDate" class="f-2 font-weight-bold"
+								>0000-00-00</span
+							>
+						</div>
+
+						<!-- Market Status -->
+						<div class="card-text">
+							<span id="marketStatus" class="f-1">အခြေအနေ</span>
+							<!-- Shop icon -->
+							<span id="marketIcon" class="custom-Market-icon"></span>
+						</div>
+					</div>
+				</div>
+				<!-- Timetable Group -->
+				<div class="card card-body">
+					<span class="text-muted text-center">12:01 PM</span>
+					<hr />
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="card-text text-left textShadow-1 f-5">
+							ထိပ်စည်း
+							<span id="setThird" class="f-2 font-weight-bold d-block"
+								>0,000.00</span
+							>
+						</div>
+						<div class="card-text text-center valSec textShadow-1 f-5">
+							နောက်ပိတ်
+							<span id="valueThird" class="f-2 font-weight-bold d-block"
+								>00,000.00</span
+							>
+						</div>
+						<div class="card-text text-center textShadow-1">
+							2D
+							<span
+								id="resultThird"
+								class="f-2 font-weight-bold d-block animate__animated animate__heartBeat animate__slow animate__infinite infinite"
+								>00</span
+							>
+						</div>
+					</div>
+					<hr />
+					<span class="text-muted text-center">4:30 PM</span>
+					<hr />
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="card-text text-left textShadow-1 f-5">
+							ထိပ်စည်း
+							<span id="setSec" class="f-2 font-weight-bold d-block"
+								>0,000.00</span
+							>
+						</div>
+						<div class="card-text text-center valSec textShadow-1 f-5">
+							နောက်ပိတ်
+							<span id="valueSec" class="f-2 font-weight-bold d-block"
+								>00,000.00</span
+							>
+						</div>
+						<div class="card-text text-center textShadow-1">
+							2D
+							<span
+								id="resultSec"
+								class="f-2 font-weight-bold d-block animate__animated animate__heartBeat animate__slow animate__infinite infinite"
+								>00</span
+							>
+						</div>
+					</div>
+					<hr />
+				</div>
+			</div>
+			<!-- End of Container -->
+		</main>
+		<!-- Top Progress -->
+		<div
+			class="progress-bar progress-bar-striped progress-bar-animated bg-warning fixed-top"
+			role="progressbar"
+			aria-valuenow="75"
+			aria-valuemin="0"
+			aria-valuemax="100"
+			style="width: 100%; height: 3px"
+		></div>
+
+		<!-- Bottom Progress -->
+		<div
+			class="progress-bar progress-bar-striped progress-bar-animated bg-warning fixed-bottom"
+			role="progressbar"
+			aria-valuenow="75"
+			aria-valuemin="0"
+			aria-valuemax="100"
+			style="width: 100%; height: 3px"
+		></div>
+
+		<script defer="defer" src="./index.js"></script>
+	</body>
+</html>
