@@ -29,38 +29,9 @@
 			integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
 	<body class="no_select">
-		<!-- Load Facebook SDK for JavaScript -->
-		<div id="fb-root"></div>
-		<script>
-			window.fbAsyncInit = function () {
-				FB.init({
-					xfbml: true,
-					version: 'v8.0',
-				});
-			};
-
-			(function (d, s, id) {
-				var js,
-					fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s);
-				js.id = id;
-				js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-				fjs.parentNode.insertBefore(js, fjs);
-			})(document, 'script', 'facebook-jssdk');
-		</script>
-
-		<!-- Your Chat Plugin code -->
-		<div
-			class="fb-customerchat bg-light"
-			attribution="setup_tool"
-			page_id="101111448435503"
-			logged_in_greeting="မနက်/ည ပေါက်ဂဏန်းလာယူပါရန်။"
-			logged_out_greeting="မနက်/ည ပေါက်ဂဏန်းလာယူပါရန်။"
-		></div>
 		<main>
 			<div class="container my-2">
 				<div class="card card-body mb-1">
@@ -76,7 +47,7 @@
 						<div id="eyesIcon" class="eyesIcon p-1 shadow"></div>
 
 						<!-- History Icon -->
-						<div id="saveIcon" class="saveIcon p-1 shadow"></div>
+						<div id="historyIcon" class="historyIcon p-1 shadow"></div>
 
 						<!-- Dice Icon -->
 						<div id="diceIcon" class="diceIcon p-1 shadow"></div>
@@ -116,10 +87,10 @@
 					</div>
 					<!-- Clock and market status -->
 					<!-- Slide show announce -->
-					<div class="d-flex justify-content-between align-items-center">
+					<div class="d-flex justify-content-between align-items-center mb-1">
 						<div
-							id="cone_striped"
-							class="cone_striped p-1 mr-3 shadow-sm"
+							id="cone_striped_Icon"
+							class="cone_striped_Icon p-1 mr-3 shadow-sm"
 						></div>
 						<div id="custom_slide_text" class="d-inline-block text-muted"></div>
 					</div>
@@ -127,18 +98,20 @@
 					<div
 						class="d-flex justify-content-between align-items-center text-center"
 					>
+						<!-- Update Date -->
+						<div class="card-text">
+							<span id="custom-Calendar-icon" class="d-inline-block"
+								><small>Date:</small></span
+							>
+							<span id="currentDate" class="f-2 font-weight-bold"
+								>00-00-0000</span
+							>
+						</div>
+
 						<!-- Clock -->
 						<div class="card-text" id="custom-Clock-icon">
 							<span class="d-inline-block f-2 font-weight-bold" id="clock"
 								>16:32:30 PM</span
-							>
-						</div>
-
-						<!-- Update Date -->
-						<div class="card-text">
-							<span id="custom-Calendar-icon" class="d-inline-block"></span>
-							<span id="currentDate" class="f-2 font-weight-bold"
-								>0000-00-00</span
 							>
 						</div>
 
@@ -150,82 +123,82 @@
 						</div>
 					</div>
 				</div>
-				<!-- Timetable Group -->
-				<div class="card card-body">
-					<span class="text-muted text-center">12:01 PM</span>
-					<hr />
-					<div class="d-flex justify-content-between align-items-center">
-						<div class="card-text text-left textShadow-1 f-5">
-							ထိပ်စည်း
-							<span id="setThird" class="f-2 font-weight-bold d-block"
-								>0,000.00</span
-							>
-						</div>
-						<div class="card-text text-center valSec textShadow-1 f-5">
-							နောက်ပိတ်
-							<span id="valueThird" class="f-2 font-weight-bold d-block"
-								>00,000.00</span
-							>
-						</div>
-						<div class="card-text text-center textShadow-1">
-							2D
-							<span
-								id="resultThird"
-								class="f-2 font-weight-bold d-block animate__animated animate__heartBeat animate__slow animate__infinite infinite"
-								>00</span
-							>
+				<div class="container mx-auto my-3">
+					<div class="card card-body">
+						<div class="card-text">
+							<h1 class="f-1 text-center">
+								ဤနေရာတွင် ပြုပြင်ပြောင်းလဲ ပြင်ဆင်နေဆဲဖြစ်ပါသည်။
+							</h1>
 						</div>
 					</div>
-					<hr />
-					<span class="text-muted text-center">4:30 PM</span>
-					<hr />
-					<div class="d-flex justify-content-between align-items-center">
-						<div class="card-text text-left textShadow-1 f-5">
-							ထိပ်စည်း
-							<span id="setSec" class="f-2 font-weight-bold d-block"
-								>0,000.00</span
-							>
-						</div>
-						<div class="card-text text-center valSec textShadow-1 f-5">
-							နောက်ပိတ်
-							<span id="valueSec" class="f-2 font-weight-bold d-block"
-								>00,000.00</span
-							>
-						</div>
-						<div class="card-text text-center textShadow-1">
-							2D
-							<span
-								id="resultSec"
-								class="f-2 font-weight-bold d-block animate__animated animate__heartBeat animate__slow animate__infinite infinite"
-								>00</span
-							>
-						</div>
-					</div>
-					<hr />
 				</div>
 			</div>
 			<!-- End of Container -->
 		</main>
 		<!-- Top Progress -->
 		<div
-			class="progress-bar progress-bar-striped progress-bar-animated bg-warning fixed-top"
+			class="progress-bar progress-bar-striped progress-bar-animated bg-secondary fixed-top"
 			role="progressbar"
 			aria-valuenow="75"
 			aria-valuemin="0"
 			aria-valuemax="100"
-			style="width: 100%; height: 3px"
+			style="width: 100%; height: 5px"
 		></div>
 
 		<!-- Bottom Progress -->
 		<div
-			class="progress-bar progress-bar-striped progress-bar-animated bg-warning fixed-bottom"
+			class="progress-bar progress-bar-striped progress-bar-animated bg-secondary fixed-bottom"
 			role="progressbar"
 			aria-valuenow="75"
 			aria-valuemin="0"
 			aria-valuemax="100"
-			style="width: 100%; height: 3px"
+			style="width: 100%; height: 5px"
 		></div>
 
-		<script defer="defer" src="./index.js"></script>
+		<script defer="defer" src="./assets/js/app.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<!-- <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
+
+		<script type="text/javascript">
+			// My web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: 'AIzaSyC-umzrh2WMHo9g738Eh0igROnVVPcNRJI',
+				authDomain: 'mylab-e02d3.firebaseapp.com',
+				databaseURL: 'https://mylab-e02d3.firebaseio.com',
+				projectId: 'mylab-e02d3',
+				storageBucket: 'mylab-e02d3.appspot.com',
+				messagingSenderId: '685380224845',
+				appId: '1:685380224845:web:4faee5435a31dee9221904',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+
+			// Write Data to Firebase
+			var firebaseWriteRef = firebase.database().ref('history');
+			document.getElementById('save').addEventListener('click', function (e) {
+				const fillID = document.getElementById('fillID').value;
+				const data = document.getElementById('data').value;
+				const date = document.getElementById('date').value;
+				e.preventDefault();
+
+				firebaseWriteRef.push(data);
+			});
+
+			// Read Data from the Firebase
+			var firebaseRef = firebase.database().ref('history');
+			firebaseRef.on('value', function (snapshot) {
+				var data = snapshot.val();
+
+				snapshot.forEach(function (element) {
+					console.log(element.key);
+
+					document.getElementById('outputTest').innerHTML += `
+						<h5>${element.val().data}</h5>
+						<p>${element.val().date}</p>
+					`;
+				});
+			});
+		</script> -->
 	</body>
 </html>
